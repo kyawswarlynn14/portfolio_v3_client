@@ -175,7 +175,7 @@ export const CERTIFICATES = [
 
 export const BLOG ={
   title: "Blog",
-  position: "Embracing Creativity",
+  subTitle: "Embracing Creativity",
   description: "Welcome to my portfolio blog page, where I'll be sharing my creative journey as a software developer. Here, I'll delve into the diverse world of visual expression, exploring various mediums, techniques, and inspirations that have shaped my work over the years.",
   img_url: "/images/blog-background.jpg",
   link: "https://kyawswarlynn-blog.vercel.app/",
