@@ -115,9 +115,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className={`py-2 rounded-lg font-semibold text-white cursor-pointer px-12 bg-cyan-500 hover:opacity-80 transition-all duration-300 ${
-              isDiabled && "cursor-not-allowed"
-            }`}
+            className={`normalButton px-12 disabled:cursor-not-allowed`}
             disabled={isDiabled}
           >
             {isLoading ? "Sending..." : "Send"}

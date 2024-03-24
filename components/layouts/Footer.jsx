@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import { FaTelegram } from "react-icons/fa";
 import { FOOTERCONTACT, IMAGES } from "@/constants";
+import { scrollToSection } from "@/utils/services";
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -24,7 +25,7 @@ function Footer() {
             className="w-12 h-12 rounded-full mb-3 mx-auto"
           />
           <h3 className="text-lg font-semibold">Kyaw Swar Lynn</h3>
-          <p>
+          <p className="font-bold font-mono text-sm">
             <AiOutlineCopyrightCircle className="inline-flex" /> {year} ksl
           </p>
         </div>
@@ -62,7 +63,7 @@ function Footer() {
           </h4>
           <div className="flex gap-2 ">
             <a
-              href="/#home"
+              onClick={() => scrollToSection("home")}
               className=" dark:text-gray-100 hover:underline underline-offset-2"
             >
               Home
@@ -71,7 +72,7 @@ function Footer() {
             <span>|</span>
 
             <a
-              href="/#services"
+              onClick={() => scrollToSection("services")}
               className=" dark:text-gray-100 hover:underline underline-offset-2"
             >
               Service
@@ -80,7 +81,7 @@ function Footer() {
             <span>|</span>
 
             <a
-              href="/#projects"
+              onClick={() => scrollToSection("projects")}
               className=" dark:text-gray-100 hover:underline underline-offset-2"
             >
               Projects
@@ -89,7 +90,7 @@ function Footer() {
             <span>|</span>
 
             <a
-              href="/#contact"
+              onClick={() => scrollToSection("contact")}
               className=" dark:text-gray-100 hover:underline underline-offset-2"
             >
               Contact

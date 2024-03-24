@@ -6,6 +6,7 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import { RiContactsFill } from "react-icons/ri";
 import ThemeSwitcher from "@/utils/ThemeSwitcher";
 import Link from "next/link";
+import { scrollToSection } from "@/utils/services";
 
 export default function Navbar() {
   return (
@@ -19,25 +20,40 @@ export default function Navbar() {
 
         <div className="flex gap-2">
           <nav className="md:flex gap-2 mt-1 font-semibold hidden items-center">
-            <a href="/#home" className={`webNavButton`}>
+            <button
+              onClick={() => scrollToSection("home")}
+              className={`webNavButton`}
+            >
               <AiFillHome /> HOME
-            </a>
+            </button>
 
-            <a href="/#services" className={`webNavButton`}>
+            <button
+              onClick={() => scrollToSection("services")}
+              className={`webNavButton`}
+            >
               <FaLaptopCode /> SERVICES
-            </a>
+            </button>
 
-            <a href="/#projects" className={`webNavButton`}>
-              <BsPersonWorkspace /> PORTFOLIO
-            </a>
+            <button
+              onClick={() => scrollToSection("projects")}
+              className={`webNavButton`}
+            >
+              <BsPersonWorkspace /> PROJECTS
+            </button>
 
-            <a href="/#certificates" className={`webNavButton hidden lg:flex`}>
+            <button
+              onClick={() => scrollToSection("certificates")}
+              className={`webNavButton hidden lg:flex`}
+            >
               <FaCertificate /> CERTIFICATES
-            </a>
+            </button>
 
-            <a href="/#contact" className={`webNavButton`}>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className={`webNavButton`}
+            >
               <RiContactsFill /> CONTACT
-            </a>
+            </button>
           </nav>
 
           <ThemeSwitcher />

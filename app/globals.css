@@ -9,10 +9,11 @@
 .main-scrollbar::-webkit-scrollbar-thumb {
   background: #00FFFF;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .main-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #00FFFF;
+  background: #29b5b5;
 }
 
 .main-scrollbar::-webkit-scrollbar-track {

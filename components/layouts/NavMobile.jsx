@@ -6,13 +6,12 @@ import { AiFillHome } from "react-icons/ai";
 import { FaLaptopCode, FaCertificate } from "react-icons/fa";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { CgMenuBoxed } from "react-icons/cg";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { IMAGES } from "@/constants";
+import { scrollToSection } from "@/utils/services";
 
 export default function NavMobile() {
   let [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
 
   function closeModal() {
     setIsOpen(false);
@@ -49,51 +48,51 @@ export default function NavMobile() {
 
             <nav className="flex flex-col mt-4 mx-6 gap-4">
               <a
-                href="/#home"
-                className={`mobileNavButton ${
-                  pathname === "/#home" && " text-[#00FF00]"
-                }`}
-                onClick={closeModal}
+                onClick={() => {
+                  closeModal();
+                  scrollToSection("home");
+                }}
+                className={`mobileNavButton`}
               >
                 <AiFillHome /> HOME
               </a>
 
               <a
-                href="/#services"
-                className={`mobileNavButton ${
-                  pathname === "/#services" && " text-[#00FF00]"
-                }`}
-                onClick={closeModal}
+                onClick={() => {
+                  closeModal();
+                  scrollToSection("services");
+                }}
+                className={`mobileNavButton`}
               >
                 <FaLaptopCode /> SERVICES
               </a>
 
               <a
-                href="/#projects"
-                className={`mobileNavButton ${
-                  pathname === "/#projects" && " text-[#00FF00]"
-                }`}
-                onClick={closeModal}
+                onClick={() => {
+                  closeModal();
+                  scrollToSection("projects");
+                }}
+                className={`mobileNavButton`}
               >
                 <BsPersonWorkspace /> PORTFOLIO
               </a>
 
               <a
-                href="/#certificates"
-                className={`mobileNavButton ${
-                  pathname === "/#certificates" && " text-[#00FF00]"
-                }`}
-                onClick={closeModal}
+                onClick={() => {
+                  closeModal();
+                  scrollToSection("certificates");
+                }}
+                className={`mobileNavButton`}
               >
                 <FaCertificate /> CERTIFICATES
               </a>
 
               <a
-                href="/#contact"
-                className={`mobileNavButton ${
-                  pathname === "/#contact" && " text-[#00FF00]"
-                }`}
-                onClick={closeModal}
+                onClick={() => {
+                  closeModal();
+                  scrollToSection("contact");
+                }}
+                className={`mobileNavButton`}
               >
                 <RiContactsFill /> CONTACT
               </a>

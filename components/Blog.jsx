@@ -6,7 +6,7 @@ function Blog() {
     <div id="blog" className="pageMainDiv">
       <h3 className="subTitle">{BLOG?.title}</h3>
 
-      <div className="h-[440px] md:h-[400px] w-auto rounded-xl relative   my-4">
+      <div className="h-[460px] md:h-[400px] w-auto rounded-xl relative   my-4">
         <div className="absolute inset-0 bg-black opacity-50 rounded-xl"></div>
         <Image
           width={500}

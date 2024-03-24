@@ -8,7 +8,6 @@ import StarsCanvas from "@/components/canvas/Stars";
 import Blog from "@/components/Blog";
 import Main from "@/components/Main";
 import Heading from "@/utils/Heading";
-import Link from "next/link";
 import Projects from "@/components/Projects";
 import Certificates from "@/components/Certificates";
 
