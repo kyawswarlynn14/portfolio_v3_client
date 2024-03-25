@@ -1,13 +1,10 @@
 "use client";
 import { Dialog } from "@headlessui/react";
 import { useState } from "react";
-import { RiCloseCircleFill, RiContactsFill } from "react-icons/ri";
-import { AiFillHome } from "react-icons/ai";
-import { FaLaptopCode, FaCertificate } from "react-icons/fa";
-import { BsPersonWorkspace } from "react-icons/bs";
+import { RiCloseCircleFill } from "react-icons/ri";
 import { CgMenuBoxed } from "react-icons/cg";
 import Image from "next/image";
-import { IMAGES } from "@/constants";
+import { IMAGES, NAV_BUTTONS } from "@/constants";
 import { scrollToSection } from "@/utils/services";
 
 export default function NavMobile() {
@@ -38,7 +35,7 @@ export default function NavMobile() {
         <div className="fixed inset-0 bg-black bg-opacity-40" />
 
         <div className="fixed inset-0 z-40 flex">
-          <Dialog.Panel className="relative mr-auto flex h-full w-60 flex-col overflow-y-auto bg-slate-800 py-4 pb-6 shadow-xl rounded-r-3xl">
+          <Dialog.Panel className="relative mr-auto flex h-full w-64 flex-col overflow-y-auto bg-slate-800 py-4 pb-6 shadow-xl rounded-r-3xl">
             <div
               className="flex items-center justify-end px-4 my-4"
               onClick={closeModal}
@@ -47,55 +44,18 @@ export default function NavMobile() {
             </div>
 
             <nav className="flex flex-col mt-4 mx-6 gap-4">
-              <a
-                onClick={() => {
-                  closeModal();
-                  scrollToSection("home");
-                }}
-                className={`mobileNavButton`}
-              >
-                <AiFillHome /> HOME
-              </a>
-
-              <a
-                onClick={() => {
-                  closeModal();
-                  scrollToSection("services");
-                }}
-                className={`mobileNavButton`}
-              >
-                <FaLaptopCode /> SERVICES
-              </a>
-
-              <a
-                onClick={() => {
-                  closeModal();
-                  scrollToSection("projects");
-                }}
-                className={`mobileNavButton`}
-              >
-                <BsPersonWorkspace /> PORTFOLIO
-              </a>
-
-              <a
-                onClick={() => {
-                  closeModal();
-                  scrollToSection("certificates");
-                }}
-                className={`mobileNavButton`}
-              >
-                <FaCertificate /> CERTIFICATES
-              </a>
-
-              <a
-                onClick={() => {
-                  closeModal();
-                  scrollToSection("contact");
-                }}
-                className={`mobileNavButton`}
-              >
-                <RiContactsFill /> CONTACT
-              </a>
+              {NAV_BUTTONS.map(i => (
+                <a
+                  key={i.id}
+                  onClick={() => {
+                    closeModal();
+                    scrollToSection(i.id);
+                  }}
+                  className={`mobileNavButton`}
+                >
+                  {i.icon} {i.title}
+                </a>
+              ))}
             </nav>
 
             <div className="mx-auto rounded-full w-40 h-40 relative overflow-hidden my-6">

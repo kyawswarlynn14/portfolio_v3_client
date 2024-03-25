@@ -1,12 +1,9 @@
 import React from "react";
 import NavMobile from "./NavMobile";
-import { AiFillHome } from "react-icons/ai";
-import { FaCertificate, FaLaptopCode } from "react-icons/fa";
-import { BsPersonWorkspace } from "react-icons/bs";
-import { RiContactsFill } from "react-icons/ri";
 import ThemeSwitcher from "@/utils/ThemeSwitcher";
 import Link from "next/link";
 import { scrollToSection } from "@/utils/services";
+import { NAV_BUTTONS } from "@/constants";
 
 export default function Navbar() {
   return (
@@ -20,40 +17,15 @@ export default function Navbar() {
 
         <div className="flex gap-2">
           <nav className="md:flex gap-2 mt-1 font-semibold hidden items-center">
-            <button
-              onClick={() => scrollToSection("home")}
-              className={`webNavButton`}
-            >
-              <AiFillHome /> HOME
-            </button>
-
-            <button
-              onClick={() => scrollToSection("services")}
-              className={`webNavButton`}
-            >
-              <FaLaptopCode /> SERVICES
-            </button>
-
-            <button
-              onClick={() => scrollToSection("projects")}
-              className={`webNavButton`}
-            >
-              <BsPersonWorkspace /> PROJECTS
-            </button>
-
-            <button
-              onClick={() => scrollToSection("certificates")}
-              className={`webNavButton hidden lg:flex`}
-            >
-              <FaCertificate /> CERTIFICATES
-            </button>
-
-            <button
-              onClick={() => scrollToSection("contact")}
-              className={`webNavButton`}
-            >
-              <RiContactsFill /> CONTACT
-            </button>
+            {NAV_BUTTONS.map(i => (
+              <button
+                key={i.id}
+                onClick={() => scrollToSection(i.id)}
+                className={`webNavButton`}
+              >
+                {i.icon} {i.title}
+              </button>
+            ))}
           </nav>
 
           <ThemeSwitcher />

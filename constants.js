@@ -1,9 +1,42 @@
+import { AiFillFacebook, AiFillGithub, AiFillHome, AiFillLinkedin } from "react-icons/ai";
+import { BsPersonWorkspace } from "react-icons/bs";
+import { FaCertificate, FaLaptopCode, FaTelegram } from "react-icons/fa";
+import { RiContactsFill } from "react-icons/ri";
+
 export const IMAGES = {
   ksl: "/images/ksl.jpg",
   kslNew: "/images/ksl-new.jpg",
 }
 
-export const ABOUTME = {
+export const NAV_BUTTONS = [
+  {
+    id: 'home',
+    title: 'HOME',
+    icon: <AiFillHome />,
+  },
+  {
+    id: 'services',
+    title: 'SERVICES',
+    icon: <FaLaptopCode />,
+  },
+  {
+    id: 'projects',
+    title: 'PROJECTS',
+    icon: <BsPersonWorkspace />,
+  },
+  {
+    id: 'certificates',
+    title: 'CERTIFICATES',
+    icon: <FaCertificate />,
+  },
+  {
+    id: 'contact',
+    title: 'CONTACT',
+    icon: <RiContactsFill />,
+  },
+]
+
+export const ABOUT_ME = {
   name: "Kyaw Swar Lynn",
   role: "Software Developer!",
   description: `Freelancer providing services for Web Applications and Mobile Applications. Join me down below and let's start working!`,
@@ -12,6 +45,29 @@ export const ABOUTME = {
   facebook: "https://web.facebook.com/kyawswarlynn07",
   telegram: "https://t.me/kyawswarlynn14",
 }
+
+export const MAIN_BUTTONS = [
+  {
+    id: '001',
+    link: 'https://github.com/kyawswarlynn14',
+    icon: <AiFillGithub cursor="pointer" />,
+  },
+  {
+    id: '002',
+    link: 'https://web.facebook.com/kyawswarlynn07',
+    icon: <AiFillFacebook cursor="pointer" />,
+  },
+  {
+    id: '003',
+    link: 'https://www.linkedin.com/in/kyaw-swar-lynn-78ab79260/',
+    icon: <AiFillLinkedin cursor="pointer" />,
+  },
+  {
+    id: '004',
+    link: 'https://t.me/kyawswarlynn14',
+    icon: <FaTelegram cursor="pointer" />,
+  },
+]
 
 export const TECHNOLOGIES = [
     {
@@ -181,8 +237,27 @@ export const BLOG ={
   link: "https://kyawswarlynn-blog.vercel.app/",
 }
 
-export const FOOTERCONTACT = {
+export const FOOTER_CONTACT = {
     phone: "+959266654144",
     email: "kyawswarlynn14@gmail.com",
     telegram: "kyawswarlynn14",
 }
+
+export const FOOTER_NAVIGATIONS = [
+  {
+    id: 'home',
+    title: 'Home'
+  },
+  {
+    id: 'services',
+    title: 'Services'
+  },
+  {
+    id: 'projects',
+    title: 'Projects'
+  },
+  {
+    id: 'contact',
+    title: 'Contact'
+  },
+]

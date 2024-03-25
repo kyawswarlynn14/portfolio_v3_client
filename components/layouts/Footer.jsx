@@ -6,11 +6,12 @@ import {
   AiOutlineCopyrightCircle,
 } from "react-icons/ai";
 import { FaTelegram } from "react-icons/fa";
-import { FOOTERCONTACT, IMAGES } from "@/constants";
+import { FOOTER_CONTACT, FOOTER_NAVIGATIONS, IMAGES } from "@/constants";
 import { scrollToSection } from "@/utils/services";
 
 function Footer() {
   const year = new Date().getFullYear();
+
   return (
     <div
       className={` w-full border-t-2 border-black dark:border-white py-4 rounded-tl-3xl`}
@@ -37,23 +38,23 @@ function Footer() {
 
           <p className="text-sm md:text-base">
             <AiFillPhone className="inline-flex mr-2" />{" "}
-            <span>{FOOTERCONTACT?.phone}</span>
+            <span>{FOOTER_CONTACT?.phone}</span>
           </p>
 
           <p className="text-sm md:text-base">
             <AiFillMail
-              href={`mailto:${FOOTERCONTACT?.email}`}
+              href={`mailto:${FOOTER_CONTACT?.email}`}
               className="inline-flex mr-2"
             />{" "}
-            <span>{FOOTERCONTACT?.email}</span>
+            <span>{FOOTER_CONTACT?.email}</span>
           </p>
 
           <p className="text-sm md:text-base">
             <FaTelegram
-              href={`https://t.me/${FOOTERCONTACT?.telegram}`}
+              href={`https://t.me/${FOOTER_CONTACT?.telegram}`}
               className="inline-flex mr-2"
             />{" "}
-            {FOOTERCONTACT?.telegram}
+            {FOOTER_CONTACT?.telegram}
           </p>
         </div>
 
@@ -62,39 +63,17 @@ function Footer() {
             Navigations
           </h4>
           <div className="flex gap-2 ">
-            <a
-              onClick={() => scrollToSection("home")}
-              className=" dark:text-gray-100 hover:underline underline-offset-2"
-            >
-              Home
-            </a>
-
-            <span>|</span>
-
-            <a
-              onClick={() => scrollToSection("services")}
-              className=" dark:text-gray-100 hover:underline underline-offset-2"
-            >
-              Service
-            </a>
-
-            <span>|</span>
-
-            <a
-              onClick={() => scrollToSection("projects")}
-              className=" dark:text-gray-100 hover:underline underline-offset-2"
-            >
-              Projects
-            </a>
-
-            <span>|</span>
-
-            <a
-              onClick={() => scrollToSection("contact")}
-              className=" dark:text-gray-100 hover:underline underline-offset-2"
-            >
-              Contact
-            </a>
+            {FOOTER_NAVIGATIONS.map((i, index) => (
+              <div key={i.id}>
+                <a
+                  onClick={() => scrollToSection(i.id)}
+                  className=" dark:text-gray-100 hover:underline underline-offset-2 mr-2"
+                >
+                  {i.title}
+                </a>
+                {!(FOOTER_NAVIGATIONS.length === index + 1) && <span>|</span>}
+              </div>
+            ))}
           </div>
         </div>
       </div>

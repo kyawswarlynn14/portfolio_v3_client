@@ -1,8 +1,6 @@
-import { AiFillGithub, AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
-import { FaTelegram } from "react-icons/fa";
 import Image from "next/image";
 import ComputersCanvas from "./canvas/Computers";
-import { ABOUTME, IMAGES } from "@/constants";
+import { ABOUT_ME, IMAGES, MAIN_BUTTONS } from "@/constants";
 
 export default function Main() {
   return (
@@ -20,55 +18,31 @@ export default function Main() {
         </div>
 
         <h2 className="tracking-wider font-serif text-2xl dark:text-[#00FF00] font-bold md:text-4xl">
-          {ABOUTME?.name}
+          {ABOUT_ME?.name}
         </h2>
 
         <h3 className="text-lg md:text-2xl py-3 tracking-wider font-semibold">
-          {ABOUTME?.role}
+          {ABOUT_ME?.role}
         </h3>
 
         <p className="tracking-wider leading-8 font-medium dark:text-[#fdeed4] md:text-xl">
-          {`${ABOUTME?.description.split('.')[0]}.`}
+          {`${ABOUT_ME?.description.split('.')[0]}.`}
           <br />
-          {ABOUTME?.description.split('.')[1]}
+          {ABOUT_ME?.description.split('.')[1]}
         </p>
 
         <div className="w-64 md:w-80 mx-auto text-5xl flex justify-between mt-4 ">
-          <a
-            href={ABOUTME?.github}
-            className="iconStyle"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillGithub cursor="pointer" />
-          </a>
-
-          <a
-            href={ABOUTME?.facebook}
-            className="iconStyle"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillFacebook cursor="pointer" />
-          </a>
-
-          <a
-            href={ABOUTME?.linkedIn}
-            className="iconStyle"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillLinkedin cursor="pointer" />
-          </a>
-
-          <a
-            href={ABOUTME?.telegram}
-            className="iconStyle"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaTelegram cursor="pointer" />
-          </a>
+          {MAIN_BUTTONS.map(i => (
+            <a
+              key={i.link}
+              href={i.link}
+              className="iconStyle"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {i.icon}
+            </a>
+          ))}
         </div>
       </div>
 

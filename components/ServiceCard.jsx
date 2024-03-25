@@ -26,7 +26,7 @@ function ServiceCard({ service }) {
 
       <p
         onClick={() => setShow((prev) => !prev)}
-        className={`dark:text-[#fdeed4] overflow-hidden text-base p-2 text-justify ${
+        className={`dark:text-[#fdeed4] overflow-hidden text-base p-2 text-justify cursor-pointer ${
           show ? "h-fit" : "h-48"
         }`}
       >
