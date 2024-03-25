@@ -67,7 +67,7 @@ function Footer() {
               <div key={i.id}>
                 <a
                   onClick={() => scrollToSection(i.id)}
-                  className=" dark:text-gray-100 hover:underline underline-offset-2 mr-2"
+                  className=" dark:text-gray-100 font-medium text-sm md:text-base hover:underline underline-offset-2 mr-2"
                 >
                   {i.title}
                 </a>
