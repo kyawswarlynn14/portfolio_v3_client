@@ -1,15 +1,17 @@
-import Link from 'next/link';
+import { IMAGES } from "@/constants";
 
 const PageNotFound = () => {
   return (
-    <div className='bg-slate-800 text-white min-h-screen flex text-center justify-center items-center'>
-      <div className='h-fit'>
-        <h1 className='text-2xl font-bold tracking-wider'>Page Not Found</h1>
-        <p className='my-2'>Sorry, the page you requested could not be found.</p>
-        <Link href="/" className='underline underline-offset-4 text-green-600'>
-          Go back to the homepage
-        </Link>
-      </div>
+    <div className="flex flex-col items-center justify-center mt-4">
+      <img
+        src={IMAGES.notFound}
+        alt="Funny Photo"
+        className="w-80 h-auto mb-8"
+      />
+      <h1 className="text-4xl font-bold mb-4">Oops! Page Not Found</h1>
+      <p className="text-lg text-gray-600 dark:text-gray-200">
+        Looks like the page you{"'"}re looking for is missing.
+      </p>
     </div>
   );
 };

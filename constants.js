@@ -6,6 +6,7 @@ import { RiContactsFill } from "react-icons/ri";
 export const IMAGES = {
   ksl: "/images/ksl.jpg",
   kslNew: "/images/ksl-new.jpg",
+  notFound: '/images/404.gif',
 }
 
 export const NAV_BUTTONS = [
