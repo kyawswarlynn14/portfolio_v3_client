@@ -23,7 +23,7 @@ const ProjectDetail = ({ params }) => {
 
   return (
     <div className='w-full h-full flex flex-col md:flex-row gap-4 pt-14 relative'>
-      <button onClick={() => router.back()} className='absolute top-2 left-0 actionButton p-1'>
+      <button onClick={() => router.back()} className='absolute top-2 left-0 actionButton px-6'>
         <FaArrowLeft size={20} />
       </button>
 
