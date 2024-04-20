@@ -1,7 +1,9 @@
 import { Html, useProgress } from "@react-three/drei";
+import { useTheme } from "next-themes";
 
 const CanvasLoader = () => {
   const { progress } = useProgress();
+  const { theme } = useTheme();
   return (
     <Html
       as='div'
@@ -17,7 +19,7 @@ const CanvasLoader = () => {
       <p
         style={{
           fontSize: 14,
-          color: "#F1F1F1",
+          color: theme === 'light' ? '000' : "#F1F1F1",
           fontWeight: 800,
           marginTop: 40,
         }}

@@ -14,8 +14,8 @@ function Service() {
 
       <div className="w-full flex flex-row flex-wrap justify-between gap-4">
         {SERVICES?.length &&
-          SERVICES.map((service, index) => (
-            <ServiceCard key={index} service={service} />
+          SERVICES.map((service) => (
+            <ServiceCard key={service.title} service={service} />
           ))}
       </div>
     </div>

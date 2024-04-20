@@ -25,10 +25,8 @@ export default function Main() {
           {ABOUT_ME?.role}
         </h3>
 
-        <p className="tracking-wider leading-8 font-medium dark:text-[#fdeed4] md:text-xl">
-          {`${ABOUT_ME?.description.split('.')[0]}.`}
-          <br />
-          {ABOUT_ME?.description.split('.')[1]}
+        <p className="md:w-[80%] md:mx-auto tracking-wider leading-8 font-medium dark:text-[#fdeed4] md:text-lg">
+          {ABOUT_ME?.description}
         </p>
 
         <div className="w-64 md:w-80 mx-auto text-5xl flex justify-between mt-4 ">

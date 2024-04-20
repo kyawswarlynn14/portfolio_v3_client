@@ -12,14 +12,10 @@ function Projects() {
 
       <div className="w-full sm:w-[80%] sm:mx-auto md:w-full my-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         {PROJECTS?.length &&
-          PROJECTS.map((project, index) => (
+          PROJECTS.map((project) => (
             <ProjectCard
-              key={`project-${index}`}
-              name={project.title}
-              description={project.content}
-              image={project.img_url}
-              source_code_link={project.code_link}
-              demo_link={project.demo_link}
+              key={project.title}
+              project={project}
             />
           ))}
       </div>

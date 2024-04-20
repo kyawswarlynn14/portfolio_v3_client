@@ -10,7 +10,7 @@ function Certificates() {
         {CERTIFICATES?.length &&
           CERTIFICATES.map((i, index) => (
             <div
-              key={index}
+              key={i.title}
               className={`w-full gap-4 shadow-[0px_2px_10px_5px_rgba(0,0,0,0.2)] dark:shadow-slate-700 p-4 rounded-lg ${
                 index % 2 === 0 ? "md:flex" : "md:flex flex-row-reverse"
               }`}

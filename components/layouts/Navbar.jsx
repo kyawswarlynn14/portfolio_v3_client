@@ -1,11 +1,25 @@
+"use client";
+
 import React from "react";
 import NavMobile from "./NavMobile";
 import ThemeSwitcher from "@/utils/ThemeSwitcher";
 import Link from "next/link";
 import { scrollToSection } from "@/utils/services";
 import { NAV_BUTTONS } from "@/constants";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const router = useRouter();
+  
+  const handleNavClick = (id) => {
+    if(pathname !== '/') {
+      router.push(`/#${id}`);
+    } else {
+      scrollToSection(id)
+    }
+  }
+
   return (
     <nav
       className={` md:text-lg bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-[0.2] sticky top-0 z-20 rounded-b-xl border-b-2 border-black dark:border-white py-3 md:py-1  px-2 md:px-0 flex-col`}
@@ -20,7 +34,7 @@ export default function Navbar() {
             {NAV_BUTTONS.map(i => (
               <button
                 key={i.id}
-                onClick={() => scrollToSection(i.id)}
+                onClick={() => handleNavClick(i.id)}
                 className={`webNavButton`}
               >
                 {i.icon} {i.title}

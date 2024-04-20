@@ -19,9 +19,9 @@ export default function RootLayout({ children }) {
         className={`${ubuntu.variable} main-scrollbar select-none min-h-screen bg-no-repeat bg-gradient-to-r from-[#DAD299] to-[#B0DAB9] dark:from-[#0b131c] dark:to-[#1b283d] duration-100 dark:text-white text-slate-900`}
       >
         <Toaster position='top-center' reverseOrder={false} />
-        <ThemeProvider attribute="class" defaultTheme="system">
+        <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
-          <div className="w-[95%] md:w-[80%] mx-auto mb-8">{children}</div>
+          <div className="w-[95%] md:w-[80%] mx-auto mb-8 min-h-[65vh]">{children}</div>
           <Footer />
         </ThemeProvider>
       </body>

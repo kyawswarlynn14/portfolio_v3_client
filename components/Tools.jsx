@@ -95,11 +95,6 @@ function Tools() {
             <BiLogoDigitalocean size={25} />
             Digital Ocean
           </div>
-
-          <div className="toolItem">
-            <SiMicrosoftazure size={23} />
-            Azure
-          </div>
         </div>
 
         <div className="tool">
