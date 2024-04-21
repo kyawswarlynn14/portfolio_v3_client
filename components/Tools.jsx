@@ -30,7 +30,7 @@ function Tools() {
           ))}
       </div>
 
-      <div className="mt-8 md:hidden grid grid-cols-2 gap-4">
+      <div className="mt-8 md:hidden flex justify-between flex-wrap gap-8">
         <div className="tool">
           <h5 className="toolTitle">Frontend</h5>
 

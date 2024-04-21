@@ -42,11 +42,11 @@ const ProjectDetail = ({ params }) => {
         </div>
 
         <div className='w-full flex items-center justify-between mt-2'>
-          <button onClick={() => router.push(projectDetail?.demo_link)} className='actionButton px-6'>
+          <button onClick={() => window.open(projectDetail?.demo_link, "_blank")} className='actionButton px-6'>
             Demo
           </button>
 
-          <button onClick={() => router.push(projectDetail?.code_link)} className='actionButton px-6'>
+          <button onClick={() => window.open(projectDetail?.code_link, "_blank")} className='actionButton px-6'>
             Code
           </button>
         </div>

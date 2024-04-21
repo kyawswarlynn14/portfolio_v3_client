@@ -184,7 +184,7 @@ export const PROJECTS = [
     title: "Class On Cloud",
     tag: "Next Js, Tailwind CSS, Node Js",
     img_url: coc,
-    code_link: "https://coc-next.netlify.app/",
+    code_link: "https://github.com/kyawswarlynn14",
     demo_link: "https://coc-next.netlify.app/",
     description: `"Class On Cloud" revolutionizes the online learning experience by providing a dynamic platform where teachers and students can connect, collaborate, and engage in a virtual classroom environment. With a sleek and modern interface crafted using Next.js and Tailwind CSS, this platform offers a seamless learning journey for users of all backgrounds and skill levels.`,
     role: `As a frontend developer on the "Class On Cloud" project, my responsibilities included translating design mockups into functional user interfaces, implementing responsive layouts, and optimizing the performance of the application. Leveraging my expertise in Next.js and Tailwind CSS, I played a pivotal role in designing and developing the frontend components, ensuring an intuitive and visually appealing user experience.`,

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import {
@@ -8,9 +10,20 @@ import {
 import { FaTelegram } from "react-icons/fa";
 import { FOOTER_CONTACT, FOOTER_NAVIGATIONS, IMAGES } from "@/constants";
 import { scrollToSection } from "@/utils/services";
+import { usePathname, useRouter } from "next/navigation";
 
 function Footer() {
   const year = new Date().getFullYear();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNavClick = (id) => {
+    if(pathname !== '/') {
+      router.push(`/#${id}`);
+    } else {
+      scrollToSection(id)
+    }
+  }
 
   return (
     <div
@@ -66,7 +79,7 @@ function Footer() {
             {FOOTER_NAVIGATIONS.map((i, index) => (
               <div key={i.id}>
                 <a
-                  onClick={() => scrollToSection(i.id)}
+                  onClick={() => handleNavClick(i.id)}
                   className=" dark:text-gray-100 font-medium text-sm md:text-base hover:underline underline-offset-2 mr-2"
                 >
                   {i.title}
