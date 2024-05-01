@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CERTIFICATES } from "@/constants";
+import { motion } from "framer-motion";
 
 function Certificates() {
   return (
@@ -9,7 +10,11 @@ function Certificates() {
       <div className="flex flex-col gap-8">
         {CERTIFICATES?.length &&
           CERTIFICATES.map((i, index) => (
-            <div
+            <motion.div 
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: false }}
               key={i.title}
               className={`w-full gap-4 shadow-[0px_2px_10px_5px_rgba(0,0,0,0.2)] dark:shadow-slate-700 p-4 rounded-lg ${
                 index % 2 === 0 ? "md:flex" : "md:flex flex-row-reverse"
@@ -40,7 +45,7 @@ function Certificates() {
                   alt="certificate image"
                 />
               </div>
-            </div>
+            </motion.div>
           ))}
       </div>
     </div>

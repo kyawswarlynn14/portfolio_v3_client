@@ -7,6 +7,22 @@ import Link from "next/link";
 import { scrollToSection } from "@/utils/services";
 import { NAV_BUTTONS } from "@/constants";
 import { usePathname, useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+}
+
+const item = {
+  hidden: { opacity: 0, x: -100 },
+  show: { opacity: 1, x: 0 },
+}
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -30,17 +46,23 @@ export default function Navbar() {
         </Link>
 
         <div className="flex gap-2">
-          <nav className="md:flex gap-2 mt-1 font-semibold hidden items-center">
+          <motion.nav 
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="md:flex gap-2 mt-1 font-semibold hidden items-center"
+          >
             {NAV_BUTTONS.map(i => (
-              <button
+              <motion.button
+                variants={item}
                 key={i.id}
                 onClick={() => handleNavClick(i.id)}
                 className={`webNavButton`}
               >
                 {i.icon} {i.title}
-              </button>
+              </motion.button>
             ))}
-          </nav>
+          </motion.nav>
 
           <ThemeSwitcher />
 
