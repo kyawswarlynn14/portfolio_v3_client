@@ -2,18 +2,14 @@
 import Image from "next/image";
 import "../app/globals.css";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import ItemLayout from "./layouts/ItemLayout";
 
 function ServiceCard({ service }) {
   const [show, setShow] = useState(false);
 
   return (
-    <motion.div
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: false }}
-      className="w-full sm:w-[22rem] h-fit mx-auto flex flex-col text-center place-items-center p-2 rounded-xl shadow-2xl dark:shadow-slate-700 dark:shadow-lg relative overflow-hidden"
+    <ItemLayout
+      className={"w-full sm:w-[22rem] h-fit mx-auto flex flex-col text-center place-items-center p-2 rounded-xl shadow-2xl dark:shadow-slate-700 dark:shadow-lg relative overflow-hidden"}
     >
       <div className="w-full h-52 absolute top-0 rounded-t-xl overflow-hidden">
         <Image
@@ -44,7 +40,7 @@ function ServiceCard({ service }) {
       >
         {show ? "Read Less" : "Read More"}
       </button>
-    </motion.div>
+    </ItemLayout>
   );
 }
 

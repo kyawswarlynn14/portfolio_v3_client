@@ -10,11 +10,11 @@ import {
 import {
   SiMysql,
   SiNextdotjs,
-  SiMicrosoftazure,
   SiPostman,
 } from "react-icons/si";
 import BallCanvas from "./canvas/Ball";
 import { TECHNOLOGIES } from "@/constants";
+import GithubInfo from "./GithubInfo";
 
 function Tools() {
   return (
@@ -106,6 +106,8 @@ function Tools() {
           </div>
         </div>
       </div>
+
+      <GithubInfo />
     </div>
   );
 }

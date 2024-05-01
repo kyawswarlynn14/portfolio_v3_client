@@ -1,10 +1,12 @@
 "use client";
 
-import { PROJECTS } from '@/constants';
+import { MOTION_DATA, PROJECTS } from '@/constants';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import { FaArrowLeft } from "react-icons/fa6";
+import { motion } from 'framer-motion';
+import ItemLayout from '@/components/layouts/ItemLayout';
 
 const ProjectDetail = ({ params }) => {
     const projectId = params?.id;
@@ -27,10 +29,11 @@ const ProjectDetail = ({ params }) => {
         <FaArrowLeft size={20} />
       </button>
 
-      <div className='w-full md:w-1/2 h-auto'>
+      <ItemLayout 
+        className={'w-full md:w-1/2 h-auto'}
+      >
         <Image
           width={500}
-          height={'auto'}
           className='w-full h-auto border-2 border-cyan-400 rounded-lg'
           src={projectDetail?.img_url}
           alt={projectDetail?.title} 
@@ -50,18 +53,23 @@ const ProjectDetail = ({ params }) => {
             Code
           </button>
         </div>
-      </div>
+      </ItemLayout>
 
-      <div className='w-full md:w-1/2 space-y-2'>
-        <div>
+      <motion.div 
+        variants={MOTION_DATA.container}
+        initial="hidden"
+        animate="show"
+        className='w-full md:w-1/2 space-y-2'
+      >
+        <motion.div variants={MOTION_DATA.item}>
           <p className='text-center font-bold text-[18px] underline underline-offset-4'>Description</p>
           <p className='font-medium text-justify dark:text-[#fdeed4]'>{projectDetail?.description}</p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants={MOTION_DATA.item}>
           <p className='text-center font-bold text-[18px] underline underline-offset-4'>Role</p>
           <p className='font-medium text-justify dark:text-[#fdeed4]'>{projectDetail?.role}</p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   )
 }
