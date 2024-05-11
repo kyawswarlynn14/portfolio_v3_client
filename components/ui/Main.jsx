@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ComputersCanvas from "./canvas/Computers";
+import ComputersCanvas from "../canvas/Computers";
 import { ABOUT_ME, IMAGES, MAIN_BUTTONS, MOTION_DATA } from "@/constants";
 import { motion } from "framer-motion";
 

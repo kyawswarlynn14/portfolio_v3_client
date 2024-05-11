@@ -12,7 +12,7 @@ import {
   SiNextdotjs,
   SiPostman,
 } from "react-icons/si";
-import BallCanvas from "./canvas/Ball";
+import BallCanvas from "../canvas/Ball";
 import { TECHNOLOGIES } from "@/constants";
 import GithubInfo from "./GithubInfo";
 

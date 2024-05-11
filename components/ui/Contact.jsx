@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import EarthCanvas from "./canvas/Earth";
+import EarthCanvas from "../canvas/Earth";
 import axios from "axios";
 import toast from "react-hot-toast";
 

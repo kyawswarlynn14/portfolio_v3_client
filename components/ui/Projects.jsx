@@ -1,6 +1,6 @@
 import { PROJECTINFO, PROJECTS } from "@/constants";
 import ProjectCard from "./ProjectCard";
-import ItemLayout from "./layouts/ItemLayout";
+import ItemLayout from "../layouts/ItemLayout";
 
 function Projects() {
   return (

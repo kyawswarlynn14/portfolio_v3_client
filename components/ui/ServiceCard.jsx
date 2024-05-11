@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import "../app/globals.css";
+import "@/app/globals.css";
 import { useState } from "react";
-import ItemLayout from "./layouts/ItemLayout";
+import ItemLayout from "../layouts/ItemLayout";
 
 function ServiceCard({ service }) {
   const [show, setShow] = useState(false);

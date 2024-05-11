@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Tilt } from "react-tilt";
 import { CgWebsite } from "react-icons/cg";
 import Link from "next/link";
-import ItemLayout from "./layouts/ItemLayout";
+import ItemLayout from "../layouts/ItemLayout";
 
 const ProjectCard = ({ project }) => {
 

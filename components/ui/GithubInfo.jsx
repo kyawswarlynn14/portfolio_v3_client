@@ -1,10 +1,9 @@
 import React from 'react'
-import ItemLayout from './layouts/ItemLayout'
+import ItemLayout from '../layouts/ItemLayout'
 import { useTheme } from 'next-themes'
 
 const GithubInfo = () => {
     const { theme } = useTheme();
-    console.log("theme", theme)
 
   return (
     <div className='w-full mt-4 sm:mt-8 flex flex-col sm:flex-row gap-4 sm:gap-12'>

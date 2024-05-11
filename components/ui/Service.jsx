@@ -1,6 +1,6 @@
 import { SERVICES, SERVICEINFO } from "@/constants";
 import ServiceCard from "./ServiceCard";
-import ItemLayout from "./layouts/ItemLayout";
+import ItemLayout from "../layouts/ItemLayout";
 
 function Service() {
   return (

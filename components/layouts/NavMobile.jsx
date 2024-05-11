@@ -6,9 +6,12 @@ import { CgMenuBoxed } from "react-icons/cg";
 import Image from "next/image";
 import { IMAGES, NAV_BUTTONS } from "@/constants";
 import { scrollToSection } from "@/utils/services";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function NavMobile() {
   let [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   function closeModal() {
     setIsOpen(false);
@@ -16,6 +19,16 @@ export default function NavMobile() {
 
   function openModal() {
     setIsOpen(true);
+  }
+
+  const handleNavClick = (id) => {
+    if(pathname !== '/') {
+      closeModal();
+      router.push(`/#${id}`);
+    } else {
+      closeModal();
+      scrollToSection(id);
+    }
   }
 
   return (
@@ -47,10 +60,7 @@ export default function NavMobile() {
               {NAV_BUTTONS.map(i => (
                 <a
                   key={i.id}
-                  onClick={() => {
-                    closeModal();
-                    scrollToSection(i.id);
-                  }}
+                  onClick={() => handleNavClick(i?.id)}
                   className={`mobileNavButton`}
                 >
                   {i.icon} {i.title}

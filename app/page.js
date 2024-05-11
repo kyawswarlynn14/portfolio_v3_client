@@ -1,15 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { IoArrowUp } from "react-icons/io5";
-import Service from "@/components/Service";
-import Tools from "@/components/Tools";
-import Contact from "@/components/Contact";
 import StarsCanvas from "@/components/canvas/Stars";
-import Blog from "@/components/Blog";
-import Main from "@/components/Main";
 import Heading from "@/utils/Heading";
-import Projects from "@/components/Projects";
-import Certificates from "@/components/Certificates";
+import { Service, Tools, Contact, Blog, Main, Projects, Certificates} from '@/components/ui/index'
 
 export default function Home() {
   const [show, setShow] = useState(false);
