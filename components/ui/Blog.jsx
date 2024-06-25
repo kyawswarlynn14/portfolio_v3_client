@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 function Blog({ blogInfo }) {
   return (
@@ -7,10 +6,7 @@ function Blog({ blogInfo }) {
 
       <div className="h-[460px] md:h-[400px] w-auto rounded-xl relative   my-4">
         <div className="absolute inset-0 bg-black opacity-50 rounded-xl"></div>
-        <Image
-          width={300}
-          height={300}
-          property="priority"
+        <img
           src={blogInfo?.image}
           alt="blog image"
           className="h-full w-full overflow-hidden object-cover rounded-xl"

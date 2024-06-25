@@ -6,14 +6,8 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import InputWithLabel from "../layouts/InputWithLabel";
-import {
-	deleteObject,
-	getDownloadURL,
-	ref,
-	uploadBytes,
-} from "firebase/storage";
-import { storage } from "@/utils/firebase";
 import TextareaWithLabel from "../layouts/TextareaWithLabel";
+import UploadImage from "./UploadImage";
 
 function BlogInfo({ blogInfo }) {
 	const dispatch = useDispatch();
@@ -41,31 +35,6 @@ function BlogInfo({ blogInfo }) {
 	const handleInput = (e) => {
 		const { name, value } = e.target;
 		setValues((prev) => ({ ...prev, [name]: value }));
-	};
-
-	const handleUploadImage = async (e) => {
-		const file = e.target.files?.[0];
-        if (blogInfo?.image && blogInfo.image.startsWith('https')) {
-            const imageRef = ref(storage, blogInfo?.image);
-            try {
-                await deleteObject(imageRef);
-            } catch (err) {
-                console.log('delete blog image err', err)
-            }
-        }
-		try {
-			if (file) {
-				const imageRef = ref(storage, `portfolio/${file.name + Date.now()}`);
-
-				uploadBytes(imageRef, file).then((snapshot) => {
-					getDownloadURL(snapshot.ref).then((url) => {
-						setValues((prev) => ({ ...prev, image: url }));
-					});
-				});
-			}
-		} catch (error) {
-			console.error("Error upload blog image: ", error);
-		}
 	};
 
 	const handleSubmit = async (e) => {
@@ -124,29 +93,10 @@ function BlogInfo({ blogInfo }) {
 				value={values.link}
 			/>
 
-			<div className="w-full cursor-pointer p-2 border-2 border-black border-dotted mt-2 rounded-lg">
-				<input
-					type="file"
-					id="image"
-					className="hidden"
-					onChange={handleUploadImage}
-					accept="image/*"
-				/>
-
-				<label htmlFor="image" className="cursor-pointer">
-					{values.image !== "" ? (
-						<img
-							src={values.image}
-							alt="uploaded"
-							className="w-auto h-40 rounded object-cover"
-						/>
-					) : (
-						<div className="w-52 h-40 rounded-lg flex items-center justify-center bg-slate-800 text-white text-center">
-							<p>Click to add image</p>
-						</div>
-					)}
-				</label>
-			</div>
+			<UploadImage 
+				image={values.image}
+				setValues={setValues}
+			/>
 
 			<div className="w-full flex items-center justify-center my-2">
 				<button

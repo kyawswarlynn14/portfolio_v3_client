@@ -13,7 +13,6 @@ export const layoutApi = apiSlice.injectEndpoints({
 				try {
 					const { data } = await queryFulfilled;
 					if (data?.success) {
-						console.log("layout data -->", data.layout)
 						if(data?.layout?.type === "about_me") {
 							dispatch(setAboutMe(data?.layout?.data));
 						} else if (data?.layout?.type === "service_info") {

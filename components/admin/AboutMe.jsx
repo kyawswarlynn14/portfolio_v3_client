@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { setAboutMe } from '@/store/layout/layoutSlice';
 import TextareaWithLabel from '../layouts/TextareaWithLabel';
+import UploadImage from './UploadImage';
 
 function AboutMe({ aboutMe }) {
     const dispatch = useDispatch();
@@ -13,6 +14,7 @@ function AboutMe({ aboutMe }) {
         name: aboutMe?.name,
         description: aboutMe?.description,
         role: aboutMe?.role,
+        image: aboutMe?.image,
         github: aboutMe?.github,
         linkedIn: aboutMe?.linkedIn,
         facebook: aboutMe?.facebook,
@@ -115,6 +117,8 @@ function AboutMe({ aboutMe }) {
             onChange={handleInput}
             value={values.telegram}
         />
+
+        <UploadImage image={values.image} setValues={setValues} />
 
         <div className='w-full flex items-center justify-center my-2'>
             <button 

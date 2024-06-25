@@ -1,6 +1,5 @@
-import Image from "next/image";
 import ComputersCanvas from "../canvas/Computers";
-import { IMAGES, MOTION_DATA } from "@/constants";
+import { MOTION_DATA } from "@/constants";
 import { motion } from "framer-motion";
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { FaTelegram } from "react-icons/fa";
@@ -41,11 +40,8 @@ export default function Main({ aboutMe }) {
           variants={MOTION_DATA.item}
           className="mx-auto rounded-full w-60 h-60 md:w-40 md:h-40 overflow-hidden my-2"
         >
-          <Image
-            width={500}
-            height={500}
-            property="priority"
-            src={IMAGES?.kslNew}
+          <img
+            src={aboutMe?.image}
             alt="ksl"
             className="w-full h-full object-cover"
           />

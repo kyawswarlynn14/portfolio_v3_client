@@ -1,7 +1,6 @@
 "use client";
 
 import { MOTION_DATA } from "@/constants";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
@@ -50,9 +49,7 @@ const ProjectDetail = ({ params }) => {
 					</button>
 	
 					<ItemLayout className={"w-full md:w-1/2 h-auto"}>
-						<Image
-							height={500}
-							width={500}
+						<img
 							className="w-full h-auto border-2 border-cyan-400 rounded-lg"
 							src={projectDetail?.image}
 							alt={projectDetail?.title || "image"}

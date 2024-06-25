@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import "@/app/globals.css";
 import { useState } from "react";
 import ItemLayout from "../layouts/ItemLayout";
@@ -12,9 +11,7 @@ function ServiceCard({ service }) {
       className={"w-full sm:w-[22rem] h-fit mx-auto flex flex-col text-center place-items-center p-2 rounded-xl shadow-2xl dark:shadow-slate-700 dark:shadow-lg relative overflow-hidden"}
     >
       <div className="w-full h-52 absolute top-0 rounded-t-xl overflow-hidden">
-        <Image
-          width={300}
-          height={300}
+        <img
           src={service?.image}
           alt={service?.title}
           className="w-full h-full object-cover hover:scale-110 duration-500"

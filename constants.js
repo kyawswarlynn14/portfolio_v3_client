@@ -4,11 +4,9 @@ import { FaCertificate, FaLaptopCode } from "react-icons/fa";
 import { RiContactsFill } from "react-icons/ri";
 
 import ksl from '@/public/images/ksl.jpg';
-import kslNew from '@/public/images/ksl-new.jpg';
 
 export const IMAGES = {
   ksl,
-  kslNew,
   notFound : '/images/404.gif',
 }
 

@@ -1,24 +1,21 @@
 "use client";
 
-import { IMAGES } from '@/constants'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation';
 import React from 'react'
+import { useSelector } from 'react-redux';
 
 function AdminSideBar() {
   const pathname = usePathname();
   const router = useRouter();
+  const { aboutMe } = useSelector(state => state.layout);
 
   return (
     <div className='w-full h-full border-r-2 border-cyan-300 rounded-r-xl p-4'>
       <div className="pt-2">
-        <Image
+        <img
           onClick={() => router.replace('/')}
-          width={500}
-          height={500}
-          property="priority"
-          src={IMAGES?.kslNew}
+          src={aboutMe?.image}
           alt="ksl"
           className="mx-auto rounded-full w-40 h-40 overflow-hidden shadow-xl object-cover cursor-pointer"
         />

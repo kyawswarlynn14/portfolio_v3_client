@@ -3,12 +3,13 @@ import { Dialog } from "@headlessui/react";
 import { useState } from "react";
 import { RiCloseCircleFill } from "react-icons/ri";
 import { CgMenuBoxed } from "react-icons/cg";
-import Image from "next/image";
-import { IMAGES, NAV_BUTTONS } from "@/constants";
+import { NAV_BUTTONS } from "@/constants";
 import { scrollToSection } from "@/utils/services";
 import { usePathname, useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
 
 export default function NavMobile() {
+  const { aboutMe } = useSelector(state => state.layout);
   let [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
@@ -68,13 +69,11 @@ export default function NavMobile() {
               ))}
             </nav>
 
-            <div className="mx-auto rounded-full w-40 h-40 relative overflow-hidden my-6">
-              <Image
-                width={500}
-                height={500}
-                property="priority"
-                src={IMAGES?.ksl}
+            <div className="mx-auto overflow-hidden my-6">
+              <img
+                src={aboutMe?.image}
                 alt="ksl"
+                className="rounded-full w-40 h-40 object-cover"
               />
             </div>
           </Dialog.Panel>

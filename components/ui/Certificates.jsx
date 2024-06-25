@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 function Certificates({ certificates }) {
@@ -36,9 +35,7 @@ function Certificates({ certificates }) {
               </div>
 
               <div className="md:flex-1 mt-2">
-                <Image
-                  width={500}
-                  height={500}
+                <img
                   className="w-full h-auto"
                   src={i?.image}
                   alt="certificate image"

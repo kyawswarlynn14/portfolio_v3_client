@@ -1,18 +1,19 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import {
   AiFillPhone,
   AiFillMail,
   AiOutlineCopyrightCircle,
 } from "react-icons/ai";
 import { FaTelegram } from "react-icons/fa";
-import { FOOTER_CONTACT, FOOTER_NAVIGATIONS, IMAGES } from "@/constants";
+import { FOOTER_CONTACT, FOOTER_NAVIGATIONS } from "@/constants";
 import { scrollToSection } from "@/utils/services";
 import { usePathname, useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
 
 function Footer() {
+  const { aboutMe } = useSelector(state => state.layout);
   const year = new Date().getFullYear();
   const pathname = usePathname();
   const router = useRouter();
@@ -31,12 +32,10 @@ function Footer() {
     >
       <div className="w-full md:w-[80%] md:mx-auto px-2 flex flex-col items-center lg:flex-row lg:justify-between gap-6">
         <div className="text-center">
-          <Image
-            width={100}
-            height={100}
-            src={IMAGES?.ksl}
+          <img
+            src={aboutMe?.image}
             alt="ksl img"
-            className="w-12 h-12 rounded-full mb-3 mx-auto"
+            className="w-12 h-12 rounded-full mx-auto object-cover"
           />
           <h3 className="text-lg font-semibold">Kyaw Swar Lynn</h3>
           <p className="font-bold font-mono text-sm">

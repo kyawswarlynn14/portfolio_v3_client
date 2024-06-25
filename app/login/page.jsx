@@ -40,7 +40,10 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        if(values.email.trim() === "" || values.password.trim() === "") {
+            toast.error("Invalid crenditals!");
+            return
+        }
         await login({
             email: values.email,
             password: values.password

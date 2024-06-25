@@ -10,14 +10,8 @@ import {
 	useUpdateServiceMutation,
 } from "@/store/service/serviceApi";
 import InputWithLabel from "@/components/layouts/InputWithLabel";
-import {
-	deleteObject,
-	getDownloadURL,
-	ref,
-	uploadBytes,
-} from "firebase/storage";
-import { storage } from "@/utils/firebase";
 import TextareaWithLabel from "@/components/layouts/TextareaWithLabel";
+import UploadImage from "@/components/admin/UploadImage";
 
 const initialValues = {
 	title: "",
@@ -90,31 +84,6 @@ const ServiceForm = ({
 		setValues((prev) => ({ ...prev, [name]: value }));
 	};
 
-	const handleUploadImage = async (e) => {
-		const file = e.target.files?.[0];
-		if (values?.image && values.image.startsWith("https")) {
-			const imageRef = ref(storage, values?.image);
-			try {
-				await deleteObject(imageRef);
-			} catch (err) {
-				console.log("delete blog image err", err);
-			}
-		}
-		try {
-			if (file) {
-				const imageRef = ref(storage, `portfolio/${file.name + Date.now()}`);
-
-				uploadBytes(imageRef, file).then((snapshot) => {
-					getDownloadURL(snapshot.ref).then((url) => {
-						setValues((prev) => ({ ...prev, image: url }));
-					});
-				});
-			}
-		} catch (error) {
-			console.error("Error upload blog image: ", error);
-		}
-	};
-
 	const handleSubmit = async (e) => {
 		e.preventDefault();
         if(isUpdate) {
@@ -178,29 +147,7 @@ const ServiceForm = ({
 						value={values.content}
 					/>
 
-					<div className="w-full cursor-pointer p-2 border-2 border-black border-dotted mt-2 rounded-lg">
-						<input
-							type="file"
-							id="image"
-							className="hidden"
-							onChange={handleUploadImage}
-							accept="image/*"
-						/>
-
-						<label htmlFor="image" className="cursor-pointer">
-							{values.image !== "" ? (
-								<img
-									src={values.image}
-									alt="uploaded"
-									className="w-auto h-40 rounded object-cover"
-								/>
-							) : (
-								<div className="w-52 h-40 rounded-lg flex items-center justify-center bg-slate-800 text-white text-center">
-									<p>Click to add image</p>
-								</div>
-							)}
-						</label>
-					</div>
+					<UploadImage image={values.image} setValues={setValues} />
 
 					<div className="w-full flex items-center justify-center my-2">
 						<button

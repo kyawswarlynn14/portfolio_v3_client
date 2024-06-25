@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Tilt } from "react-tilt";
 import { CgWebsite } from "react-icons/cg";
 import Link from "next/link";
@@ -10,9 +9,7 @@ const ProjectCard = ({ project }) => {
     return (
       <>
         <div className="relative w-full h-[250px]">
-          <Image
-            width={300}
-            height={300}
+          <img
             src={project?.image}
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl"
@@ -30,9 +27,7 @@ const ProjectCard = ({ project }) => {
               onClick={() => window.open(project?.code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-xl flex justify-center items-center cursor-pointer bg-slate-700"
             >
-              <Image
-                width={100}
-                height={100}
+              <img
                 src="/images/github.png"
                 alt="source code"
                 className="w-1/2 h-1/2 object-contain"
