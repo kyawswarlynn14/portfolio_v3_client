@@ -1,18 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import EarthCanvas from "../canvas/Earth";
-import axios from "axios";
 import toast from "react-hot-toast";
+import { useCreateMessageMutation } from "@/store/message/messageApi";
+
+const initialState = {
+  name: "",
+  email: "",
+  phone: "",
+  company_name: "",
+  message: "",
+}
 
 const Contact = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company_name: "",
-    message: "",
-  });
+  const [createMessage, {isLoading, isSuccess, error}] = useCreateMessageMutation();
+  const [values, setValues] = useState(initialState);
+
+  useEffect(() => {
+		if (isSuccess) {
+			toast.success("Sent successfully!");
+			setValues(initialState)
+		}
+		if (error) {
+			toast.success(error.data?.message || "Sent failed!");
+			console.log("sent email err-->", error);
+		}
+	}, [isSuccess, error]);
 
   const isDiabled =
     isLoading || !values.name || !values.phone || !values.message;
@@ -24,33 +37,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
-
-    try {
-      const res = await axios.post(
-        `https://kyawswarlynn14.onrender.com/api/mails/create`,
-        values,
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      setIsLoading(false);
-      if(res?.data?.name == values?.name) {
-        setValues({
-          name: "",
-          email: "",
-          phone: "",
-          company_name: "",
-          message: "",
-        });
-        toast.success("Sended Successfully!")
-      } else {
-        toast.error("Something Went Wrong. Try Again!");
-      }
-    } catch (error) {
-      setIsLoading(false);
-      toast.error("An error occurred while sending the mail: " + error.message);
-    }
+    await createMessage(values);
   };
 
   return (
