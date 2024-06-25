@@ -70,7 +70,7 @@
   }
 
   .input{
-    @apply w-full px-4 py-2 border bg-gray-700 text-white  placeholder-gray-400 border-gray-600 rounded-md focus:outline-none focus:ring focus:border-blue-300;
+    @apply w-full px-4 py-2 border bg-transparent text-black  placeholder-gray-400 border-gray-600 rounded-md focus:outline-none focus:ring focus:border-blue-300;
   }
 
   .contactInput {
@@ -83,5 +83,9 @@
 
   .contact1Input{
     @apply placeholder:text-slate-700 dark:placeholder:text-slate-300  py-2 px-6 bg-inherit rounded-lg outline-none border-slate-900  dark:border-cyan-400 border font-medium;
+  }
+
+  .sideBarButton{
+    @apply w-full block border border-slate-800 py-2 px-4 rounded-lg font-semibold hover:scale-105;
   }
 }

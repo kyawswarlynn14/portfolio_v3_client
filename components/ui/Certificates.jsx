@@ -1,15 +1,14 @@
 import Image from "next/image";
-import { CERTIFICATES } from "@/constants";
 import { motion } from "framer-motion";
 
-function Certificates() {
+function Certificates({ certificates }) {
   return (
     <div id="certificates" className="pageMainDiv">
       <h3 className="subTitle mb-8">Certifications</h3>
 
       <div className="flex flex-col gap-8">
-        {CERTIFICATES?.length &&
-          CERTIFICATES.map((i, index) => (
+        {certificates?.length &&
+          certificates.map((i, index) => (
             <motion.div 
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
@@ -41,7 +40,7 @@ function Certificates() {
                   width={500}
                   height={500}
                   className="w-full h-auto"
-                  src={i?.img_url}
+                  src={i?.image}
                   alt="certificate image"
                 />
               </div>

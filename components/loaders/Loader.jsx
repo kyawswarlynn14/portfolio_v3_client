@@ -1,9 +1,9 @@
 import React from 'react'
 import './Loader.css'
 
-const Loader = (props) => {
+const Loader = ({ fullScreen = true }) => {
   return (
-    <div className='flex justify-center items-center h-screen'>
+    <div className={`flex justify-center items-center ${fullScreen ? 'h-screen' : 'h-fit'}`}>
         <div className="loader"></div>
     </div>
   )

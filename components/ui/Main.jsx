@@ -1,9 +1,34 @@
 import Image from "next/image";
 import ComputersCanvas from "../canvas/Computers";
-import { ABOUT_ME, IMAGES, MAIN_BUTTONS, MOTION_DATA } from "@/constants";
+import { IMAGES, MOTION_DATA } from "@/constants";
 import { motion } from "framer-motion";
+import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { FaTelegram } from "react-icons/fa";
 
-export default function Main() {
+export default function Main({ aboutMe }) {
+  const MAIN_BUTTONS = [
+    {
+      id: '001',
+      link: aboutMe?.github,
+      icon: <AiFillGithub cursor="pointer" />,
+    },
+    {
+      id: '002',
+      link: aboutMe?.facebook,
+      icon: <AiFillFacebook cursor="pointer" />,
+    },
+    {
+      id: '003',
+      link: aboutMe?.linkedIn,
+      icon: <AiFillLinkedin cursor="pointer" />,
+    },
+    {
+      id: '004',
+      link: aboutMe?.telegram,
+      icon: <FaTelegram cursor="pointer" />,
+    },
+  ]
+
   return (
     <div id="home" className=" text-center w-full my-4">
       <motion.div 
@@ -29,19 +54,19 @@ export default function Main() {
         <motion.h2 
         variants={MOTION_DATA.item}
         className="tracking-wider font-serif text-2xl dark:text-[#00FF00] font-bold md:text-4xl">
-          {ABOUT_ME?.name}
+          {aboutMe?.name}
         </motion.h2>
 
         <motion.h3 
         variants={MOTION_DATA.item}
         className="text-lg md:text-2xl py-3 tracking-wider font-semibold">
-          {ABOUT_ME?.role}
+          {aboutMe?.role}
         </motion.h3>
 
         <motion.p 
         variants={MOTION_DATA.item}
         className="md:w-[80%] md:mx-auto tracking-wider leading-8 font-medium dark:text-[#fdeed4] md:text-lg">
-          {ABOUT_ME?.description}
+          {aboutMe?.description}
         </motion.p>
 
         <motion.div 
@@ -61,7 +86,7 @@ export default function Main() {
         </motion.div>
       </motion.div>
 
-      <div className="hidden lg:block h-[200px] xl:h-[250px] w-full mx-auto">
+      <div className="hidden lg:block h-[200px] xl:h-[250px] w-full mx-auto cursor-grab">
         <ComputersCanvas />
       </div>
     </div>

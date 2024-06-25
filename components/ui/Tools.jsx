@@ -24,7 +24,7 @@ function Tools() {
       <div className="hidden md:flex flex-row flex-wrap justify-center gap-10 mt-6">
         {TECHNOLOGIES?.length &&
           TECHNOLOGIES.map((technology) => (
-            <div className="w-28 h-28" key={technology.name}>
+            <div className="w-28 h-28 cursor-grab" key={technology.name}>
               <BallCanvas icon={technology.icon} />
             </div>
           ))}

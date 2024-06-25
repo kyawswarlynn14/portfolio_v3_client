@@ -11,9 +11,9 @@ const ProjectCard = ({ project }) => {
       <>
         <div className="relative w-full h-[250px]">
           <Image
-            width={'auto'}
-            height={500}
-            src={project?.img_url}
+            width={300}
+            height={300}
+            src={project?.image}
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl"
           />
@@ -42,7 +42,7 @@ const ProjectCard = ({ project }) => {
         </div>
 
         <Link
-          href={`/project/${project?.id}`}
+          href={`/project/${project?._id}`}
           className="mt-3 cursor-pointer flex items-center justify-between"
         >
           <div>

@@ -62,6 +62,7 @@ const Contact = () => {
         <h3 className="subTitle pt-0">Contact Me</h3>
 
         <form
+          id="contact"
           onSubmit={handleSubmit}
           className=" mt-2 md:mt-6 flex flex-col items-center gap-4"
         >
@@ -123,7 +124,7 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="lg:flex-1 lg:h-auto md:h-[500px] h-[350px]">
+      <div className="lg:flex-1 lg:h-auto md:h-[500px] h-[350px] cursor-grab">
         <EarthCanvas />
       </div>
     </div>

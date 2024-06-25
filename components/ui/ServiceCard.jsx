@@ -13,9 +13,9 @@ function ServiceCard({ service }) {
     >
       <div className="w-full h-52 absolute top-0 rounded-t-xl overflow-hidden">
         <Image
-          width={500}
-          height={500}
-          src={service?.img_url}
+          width={300}
+          height={300}
+          src={service?.image}
           alt={service?.title}
           className="w-full h-full object-cover hover:scale-110 duration-500"
         />
