@@ -94,6 +94,7 @@ function BlogInfo({ blogInfo }) {
 			/>
 
 			<UploadImage 
+				id="blog_image"
 				image={values.image}
 				setValues={setValues}
 			/>

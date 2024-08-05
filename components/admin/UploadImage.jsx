@@ -3,7 +3,7 @@ import { storage } from "@/utils/firebase";
 import { deleteObject, getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import React from "react";
 
-function UploadImage({ image, setValues }) {
+function UploadImage({ id = "image", image, setValues }) {
     const handleUploadImage = async (e) => {
 		const file = e.target.files?.[0];
         if (image && image.startsWith('https')) {
@@ -33,13 +33,13 @@ function UploadImage({ image, setValues }) {
 		<div className="w-full cursor-pointer p-2 border-2 border-black border-dotted mt-2 rounded-lg">
 			<input
 				type="file"
-				id="image"
+				id={id}
 				className="hidden"
 				onChange={handleUploadImage}
 				accept="image/*"
 			/>
 
-			<label htmlFor="image" className="cursor-pointer">
+			<label htmlFor={id} className="cursor-pointer">
 				{image !== "" ? (
 					<img
 						src={image}
