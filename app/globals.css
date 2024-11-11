@@ -42,11 +42,11 @@
   }
 
   .tool {
-    @apply flex flex-col gap-2;
+    @apply flex flex-col gap-2 border p-2 rounded-lg border-black dark:border-white;
   }
 
   .toolTitle {
-    @apply text-lg font-semibold mb-2 dark:text-[#00FF00];
+    @apply text-lg font-semibold mb-2 dark:text-[#00FF00] text-center;
   }
 
   .toolItem {

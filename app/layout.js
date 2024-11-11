@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
       >
         <Toaster position='top-center' reverseOrder={false} />
         <Provider store={store}>
-          <ThemeProvider attribute="class" defaultTheme="light">
+          <ThemeProvider attribute="class" defaultTheme="dark">
             {hideLayout ? (
               <div>{children}</div>
             ) : (

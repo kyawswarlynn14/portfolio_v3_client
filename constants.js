@@ -48,33 +48,33 @@ export const TECHNOLOGIES = [
       icon: "/tech/typescript.png",
     },
     {
-      name: "React JS",
-      icon: "/tech/reactjs.png",
-    },
-    {
-      name: "Redux Toolkit",
-      icon: "/tech/redux.png",
-    },
-    {
-      name: "Angular",
-      icon: "/tech/angular.png"
-    },
-    {
-      name: "Flutter",
-      icon: "/tech/flutter.png"
+      name: "GoLang",
+      icon: "/tech/golang.png"
     },
     {
       name: "Python",
       icon: "/tech/python.png"
     },
     {
-      name: "Tailwind CSS",
-      icon: "/tech/tailwind.png",
-    },
-    {
       name: "Node JS",
       icon: "/tech/nodejs.png",
     },
+    {
+      name: "React JS",
+      icon: "/tech/reactjs.png",
+    },
+    {
+      name: "Next Js",
+      icon: "/tech/nextjs.png",
+    },
+    {
+      name: "Angular",
+      icon: "/tech/angular.png"
+    },
+    {
+      name: "Tailwind CSS",
+      icon: "/tech/tailwind.png",
+    },   
     {
       name: "MongoDB",
       icon: "/tech/mongodb.png",
@@ -86,10 +86,6 @@ export const TECHNOLOGIES = [
     {
       name: "git",
       icon: "/tech/git.png",
-    },
-    {
-      name: "Postman",
-      icon: "/tech/postman.png",
     },
 ];
 

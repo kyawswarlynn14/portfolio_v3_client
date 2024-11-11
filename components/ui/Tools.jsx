@@ -1,6 +1,6 @@
 import React from "react";
-import { FaAngular, FaNodeJs, FaReact } from "react-icons/fa";
-import { RiFlutterFill } from "react-icons/ri";
+import { FaAngular, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
+// import { RiFlutterFill } from "react-icons/ri";
 import {
   BiLogoPostgresql,
   BiLogoMongodb,
@@ -15,6 +15,7 @@ import {
 import BallCanvas from "../canvas/Ball";
 import { TECHNOLOGIES } from "@/constants";
 import GithubInfo from "./GithubInfo";
+import { FaGolang } from "react-icons/fa6";
 
 function Tools() {
   return (
@@ -24,18 +25,22 @@ function Tools() {
       <div className="hidden md:flex flex-row flex-wrap justify-center gap-10 mt-6">
         {TECHNOLOGIES?.length &&
           TECHNOLOGIES.map((technology) => (
-            <div className="w-28 h-28 cursor-grab" key={technology.name}>
+            <div title={technology.name} className="w-28 h-28 cursor-grab" key={technology.name}>
               <BallCanvas icon={technology.icon} />
             </div>
           ))}
       </div>
 
-      <div className="mt-8 md:hidden flex justify-between flex-wrap gap-8">
+      <div className="mt-8 md:hidden grid grid-cols-2 gap-2">
         <div className="tool">
           <h5 className="toolTitle">Frontend</h5>
 
           <div className="toolItem">
             <FaReact size={25} /> React
+          </div>
+
+          <div className="toolItem">
+            <SiNextdotjs size={25} /> Next Js
           </div>
 
           <div className="toolItem">
@@ -49,11 +54,15 @@ function Tools() {
 
           <div className="toolItem">
             <FaNodeJs size={25} /> Node Js
-          </div>
+          </div>  
 
           <div className="toolItem">
-            <SiNextdotjs size={25} /> Next Js
-          </div>
+            <FaPython size={25} /> Python
+          </div>  
+
+          <div className="toolItem">
+            <FaGolang size={27} /> GoLang
+          </div>  
         </div>
 
         <div className="tool">
@@ -79,8 +88,12 @@ function Tools() {
           <h5 className="toolTitle">Mobile</h5>
 
           <div className="toolItem">
-            <RiFlutterFill size={25} /> Flutter
+            <FaReact size={25} /> RactNative
           </div>
+
+          {/* <div className="toolItem">
+            <RiFlutterFill size={25} /> Flutter
+          </div> */}
         </div>
 
         <div className="tool">
