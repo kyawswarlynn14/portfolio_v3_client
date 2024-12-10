@@ -9,8 +9,11 @@ import { useGetAllServicesQuery } from "@/store/service/serviceApi";
 import { useGetAllProjectsQuery } from "@/store/project/projectApi";
 import { useGetAllCertificatesQuery } from "@/store/certificate/certificateApi";
 import MainSkeleton from "@/components/loaders/MainSkeleton";
+import { useCreateVisitorLogMutation } from "@/store/visitorLog/visitorLogApi";
+import Cookies from "js-cookie";
 
 export default function Home() {
+  const first = Cookies.get('first_time') || 'true';
   const [show, setShow] = useState(false);
   const { isLoading: aboutLoading, data: aboutMeData } = useGetLayoutQuery("about_me")
   const { isLoading: serviceInfoLoading, data: serviceInfoData } = useGetLayoutQuery("service_info")
@@ -19,8 +22,20 @@ export default function Home() {
   const { isLoading: serviceLoading, data: serviceData } = useGetAllServicesQuery()
   const { isLoading: projectLoading, data: projectData } = useGetAllProjectsQuery()
   const { isLoading: certificateLoading, data: certificateData } = useGetAllCertificatesQuery()
+  const [ createVisitorLog ] = useCreateVisitorLogMutation();
 
   const isLoading = aboutLoading || serviceInfoLoading || projectInfoLoading || blogInfoLoading || serviceLoading || projectLoading || certificateLoading;
+
+  useEffect(() => {
+    const runCreateVisitorLog = async () => {
+      console.log("call create visitor >>>")
+      await createVisitorLog();
+      Cookies.set('first_time', "false");
+    };
+    if(first === "true") {
+      runCreateVisitorLog();
+    }
+  }, [first, createVisitorLog]);  
  
   useEffect(() => {
     const handleScroll = () => {

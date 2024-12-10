@@ -43,6 +43,10 @@ function AdminSideBar() {
         <Link href={'/admin/messages'} className={`sideBarButton ${pathname == '/admin/messages' && 'bg-cyan-300'}`}>
           Messages
         </Link>
+
+        <Link href={'/admin/visitors'} className={`sideBarButton ${pathname == '/admin/visitors' && 'bg-cyan-300'}`}>
+          Visitors
+        </Link>
       </div>
     </div>
   )
