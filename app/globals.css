@@ -30,7 +30,7 @@
   }
 
   .webNavButton {
-    @apply font-mono text-base hover:bg-[#ffffff4d] p-2 px-4 rounded-lg ease-in-out duration-500 flex items-center gap-1;
+    @apply font-mono text-sm lg:text-base hover:bg-[#ffffff4d] p-2 px-4 rounded-lg ease-in-out duration-500 flex items-center gap-1;
   }
 
   .mobileNavButton {

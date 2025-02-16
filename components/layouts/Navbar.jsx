@@ -41,7 +41,7 @@ export default function Navbar() {
       className={` md:text-lg bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-[0.2] sticky top-0 z-20 rounded-b-xl border-b-2 border-black dark:border-white py-3 md:py-1  px-2 md:px-0 flex-col`}
     >
       <div className="md:w-[95%] lg:w-[80%] mx-auto flex justify-between items-center">
-        <Link href={"/#home"} className=" font-bold tracking-wider font-mono">
+        <Link href={"/#home"} className=" font-bold text-sm lg:text-base tracking-wider font-mono">
           DevelopedByKSL
         </Link>
 
@@ -50,7 +50,7 @@ export default function Navbar() {
             variants={container}
             initial="hidden"
             animate="show"
-            className="md:flex gap-2 mt-1 font-semibold hidden items-center"
+            className="md:flex mt-1 lg:gap-2 font-semibold hidden items-center"
           >
             {NAV_BUTTONS.map(i => (
               <motion.button
