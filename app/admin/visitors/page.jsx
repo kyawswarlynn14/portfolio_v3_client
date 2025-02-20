@@ -8,6 +8,7 @@ import DeleteTable from '@/components/layouts/DeleteTable';
 import toast from 'react-hot-toast';
 import { useDeleteVisitorLogMutation, useGetAllVisitorLogsQuery } from '@/store/visitorLog/visitorLogApi';
 import VisitorDetail from './VisitorDetail';
+import { formatYangonTime } from '@/utils/services';
 
 function Visitors() {
     const { aboutMe } = useSelector(state => state.layout);
@@ -40,9 +41,10 @@ function Visitors() {
     const columns = [
         { field: "id", headerName: "ID", flex: 0.5 },
         { field: "no", headerName: "No", flex: 0.1 },
-        { field: "browser", headerName: "Browser", flex: 0.4 },
-        { field: "country", headerName: "Country", flex: 0.4 },
+        { field: "date", headerName: "Date", flex: 0.4 },
         { field: "device", headerName: "Device", flex: 0.3 },
+        { field: "os", headerName: "OS", flex: 0.3 },
+        { field: "browser", headerName: "Browser", flex: 0.4 },
         {
             field: "detail",
             headerName: "Detail",
@@ -78,9 +80,10 @@ function Visitors() {
                 rows.push({
                     id: item?._id,
                     no: index + 1,
+                    date: formatYangonTime(item?.timestamp),
                     device: item?.device,
+                    os: item?.os,
                     browser: item?.browser,
-                    country: item?.country,
                 });
             });
     }

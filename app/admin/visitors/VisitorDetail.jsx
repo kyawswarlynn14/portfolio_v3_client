@@ -1,5 +1,6 @@
 "use client";
 
+import { formatYangonTime } from "@/utils/services";
 import { Dialog } from "@mui/material";
 import React, { useState } from "react";
 import { BiDetail } from "react-icons/bi";
@@ -52,7 +53,7 @@ const VisitorDetail = ({ visitor }) => {
 
                     <div className="flex justify-between">
                         <Item label={"IP Address"} value={visitor?.ip} />
-                        <Item label={"Date"} value={visitor?.timestamp} />
+                        <Item label={"Date"} value={formatYangonTime(visitor?.timestamp)} />
                     </div>
                 </div>
 			</Dialog>
