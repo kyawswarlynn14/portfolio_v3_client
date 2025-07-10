@@ -76,7 +76,7 @@ function Visitors() {
     const rows = [];
     {
         visitors?.length > 0 &&
-            visitors.forEach((item, index) => {
+            [...visitors].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).forEach((item, index) => {
                 rows.push({
                     id: item?._id,
                     no: index + 1,

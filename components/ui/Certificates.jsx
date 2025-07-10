@@ -7,7 +7,7 @@ function Certificates({ certificates }) {
 
       <div className="flex flex-col gap-8">
         {certificates?.length &&
-          certificates.map((i, index) => (
+          [...certificates].sort((a, b) => new Date(b.created_at) - new Date(a.created_at)).map((i, index) => (
             <motion.div 
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
