@@ -11,6 +11,7 @@ import { FOOTER_CONTACT, FOOTER_NAVIGATIONS } from "@/constants";
 import { scrollToSection } from "@/utils/services";
 import { usePathname, useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
+import localData from "@/public/data.json";
 
 function Footer() {
   const { aboutMe } = useSelector(state => state.layout);
@@ -33,7 +34,7 @@ function Footer() {
       <div className="w-full md:w-[80%] md:mx-auto px-2 flex flex-col items-center lg:flex-row lg:justify-between gap-6">
         <div className="text-center">
           <img
-            src={aboutMe?.image}
+            src={aboutMe?.image || localData.aboutMe.image}
             alt="ksl img"
             className="w-12 h-12 rounded-full mx-auto object-cover"
           />

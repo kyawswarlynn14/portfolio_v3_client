@@ -1,0 +1,250 @@
+{
+    "aboutMe": {
+        "name": "Kyaw Swar Lynn",
+        "role": "Software Developer",
+        "description": "As a Full-Stack Developer, I thrive at the intersection of creativity and functionality, crafting robust web applications that delight users and exceed expectations. Currently, I am proud to be a part of the innovative team at TastySoft, a leading software company based in Myanmar, where I've been contributing since November 2023.",
+        "github": "https://github.com/kyawswarlynn14",
+        "linkedIn": "https://www.linkedin.com/in/kyaw-swar-lynn-78ab79260/",
+        "facebook": "https://web.facebook.com/kyawswarlynn.dev",
+        "telegram": "https://t.me/kyawswarlynn14",
+        "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fphoto_2025-01-03%209.25.58%E2%80%AFPM.jpeg1735916211092?alt=media&token=ac6e659c-1bb0-4bda-8fff-1146f2942fec",
+        "view_count": 2,
+        "t1": "",
+        "t2": ""
+    },
+    "serviceInfo": {
+        "title": "Services I offer",
+        "description": "I specialize in building dynamic, responsive, and scalable web applications using modern technologies like React.js, Next.js, Node.js, and Go. I create clean, user-friendly interfaces and robust back-end systems. My skill set also includes Python, Docker, PostgreSQL, and MongoDB, allowing me to develop full-stack solutions efficiently."
+    },
+    "projectInfo": {
+        "title": "Projects",
+        "description": "I have successfully built various projects using React Js, Next Js, Node Js, Express Js and Flutter. Proficient in React.js and Next.js, I also possess strong backend skills in Node.js and Express.js. I specialize in database management using Sequelize, with expertise in MySQL and PostgreSQL. My portfolio showcases dynamic, user-friendly web interfaces and fast, engaging experiences, seamlessly integrating frontend and backend technologies."
+    },
+    "blogInfo": {
+        "title": "Blog",
+        "sub_title": "Embracing Creativity",
+        "description": "Welcome to my portfolio blog page, where I'll be sharing my creative journey as a software developer. Here, I'll delve into the diverse world of visual expression, exploring various mediums, techniques, and inspirations that have shaped my work over the years.",
+        "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fblog-background.jpg1722854554619?alt=media&token=01e7a563-50f0-491a-978e-f84d2ba7bf4a",
+        "link": "https://kyawswarlynn-blog.vercel.app/"
+    },
+    "services": [
+        {
+            "_id": "66abae5df1ccf7ce0bd683af",
+            "title": "Web Development",
+            "content": "As a web developer, I specialize in creating dynamic and interactive websites that are tailored to meet your unique business needs. I utilize the latest web technologies and frameworks to build responsive, user-friendly websites that engage your audience. From the initial concept and design to the implementation and deployment, I ensure a seamless development process. Whether you need an e-commerce platform, a content management system, or a custom web application, I can deliver a solution that not only looks great but also functions flawlessly across different browsers and devices.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fweb-dev.jpg1722527321281?alt=media&token=bfd3207f-df3a-4a25-a8ee-7cc66d414106",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-01T15:48:45.44Z",
+            "updated_at": "2024-08-01T15:48:45.44Z"
+        },
+        {
+            "_id": "66abae7df1ccf7ce0bd683b0",
+            "title": "Mobile App Development",
+            "content": "In today's mobile-driven world, having a strong mobile presence is essential for any business. As a mobile app developer, I specialize in creating cutting-edge applications that run seamlessly on iOS and Android platforms. From concept to launch, I work closely with you to understand your app requirements and develop a customized solution that aligns with your business goals. With expertise in both native and hybrid app development, I can create feature-rich, intuitive mobile applications that deliver an exceptional user experience. Whether you need a consumer-facing app or an enterprise solution, I can turn your ideas into reality and help you reach your target audience effectively.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fapp-development.png1722527353037?alt=media&token=e111dd20-770b-4f77-974f-84ed240dd57b",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-01T15:49:17.338Z",
+            "updated_at": "2024-08-01T15:49:17.338Z"
+        },
+        {
+            "_id": "66abaea4f1ccf7ce0bd683b1",
+            "title": "Web Design",
+            "content": "With a keen eye for aesthetics and a deep understanding of user experience, I offer professional web design services that captivate visitors and leave a lasting impression. I believe that a well-designed website is a powerful tool for attracting and retaining customers. Through a combination of creativity and technical expertise, I create visually stunning layouts, intuitive navigation, and compelling graphics that reflect your brand identity. By focusing on usability and accessibility, I ensure that your website is engaging, easy to navigate, and optimized for conversions.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fweb-design.jpg1722527392396?alt=media&token=1696b265-bd95-46b1-8f97-b46f3b32fa99",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-01T15:49:56.345Z",
+            "updated_at": "2024-08-01T15:49:56.345Z"
+        }
+    ],
+    "projects": [
+        {
+            "_id": "66abaef3f1ccf7ce0bd683b2",
+            "title": "Class On Cloud",
+            "description": "Class On Cloud\" revolutionizes the online learning experience by providing a dynamic platform where teachers and students can connect, collaborate, and engage in a virtual classroom environment. With a sleek and modern interface crafted using Next.js and Tailwind CSS, this platform offers a seamless learning journey for users of all backgrounds and skill levels.",
+            "role": "As a frontend developer on the \"Class On Cloud\" project, my responsibilities included translating design mockups into functional user interfaces, implementing responsive layouts, and optimizing the performance of the application. Leveraging my expertise in Next.js and Tailwind CSS, I played a pivotal role in designing and developing the frontend components, ensuring an intuitive and visually appealing user experience.",
+            "demo_link": "https://coc-next.netlify.app/",
+            "code_link": "https://github.com/kyawswarlynn14",
+            "tag": "Next Js, Tailwind CSS, Node Js",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fcoc.png1722527456459?alt=media&token=300cf396-aa80-4aaf-b7ac-a29415a0f56e",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-01T15:51:15.409Z",
+            "updated_at": "2024-08-01T15:51:15.409Z"
+        },
+        {
+            "_id": "66abaf41f1ccf7ce0bd683b3",
+            "title": "Mandalay Software Institute",
+            "description": "The Mandalay Software Institute website is a comprehensive platform designed to provide a seamless experience for individuals seeking training in software development. From browsing courses to purchasing and leaving reviews, the website offers a range of functionalities to cater to users' needs. Developed using React.js, Node.js, Material-UI, Firebase, PostgreSQL, and Tailwind CSS, this application delivers a modern and efficient solution for both students and administrators.",
+            "role": "As the sole full-stack developer on the Mandalay Software Institute project, I conceptualized, designed, and implemented the entire application from start to finish. My responsibilities encompassed frontend and backend development, database design, API integration, and deployment. Leveraging my expertise in React.js, Node.js, Material-UI, Firebase, PostgreSQL, and Tailwind CSS, I crafted a user-friendly interface, implemented robust features, and ensured seamless functionality across all aspects of the platform. Additionally, I developed an intuitive dashboard for administrators to manage courses, user accounts, and reviews, providing comprehensive control and oversight of the platform's operations.",
+            "demo_link": "https://mandalaysoftwareinstitute.com",
+            "code_link": "https://github.com/kyawswarlynn14",
+            "tag": "React Js, Node Js, Mui, Firebase, Postgres, Tailwind CSS",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fmsi.png1722527544599?alt=media&token=fd1b68dd-5658-42b5-a6a6-30dfb92793a4",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-01T15:52:33.539Z",
+            "updated_at": "2024-08-01T15:52:33.539Z"
+        },
+        {
+            "_id": "66abaf89f1ccf7ce0bd683b4",
+            "title": "Nano-Expenzo (Expense App)",
+            "description": "The Nano-Expense is a simple yet powerful web application designed to help users manage their finances efficiently. Built with a user-friendly interface, this app allows users to track their income and expenses effortlessly while categorizing transactions for better organization.\nWith intuitive navigation and seamless functionality, users can add, update, or delete income and expense entries, filter transactions by day, month, or year, and generate detailed financial reports. The app also includes a user profile section where users can update their personal information and change passwords securely.\nWhether you're budgeting for daily expenses or analyzing yearly financial trends, the Nano-Expenzo provides the tools you need to stay in control of your finances.",
+            "role": "As the developer of the Nano-Expense, my role involved conceptualizing, designing, and implementing the application using Next.js for the frontend, Go for the backend, and MongoDB for data storage. I was responsible for building a responsive and intuitive user interface, developing robust APIs for managing income and expense transactions, and ensuring seamless data storage and retrieval. By leveraging Next.js for dynamic frontend interactions and Go for efficient backend processing, I created a high-performance financial management tool that allows users to track, categorize, and analyze their expenses with ease.",
+            "demo_link": "https://expenzo.kyawswarlynn.com",
+            "code_link": "https://github.com/kyawswarlynn14",
+            "tag": "NextJs, Golang",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fexpenzo.png1739787740347?alt=media&token=9072d790-1273-43e7-a007-7e76dc110f4e",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-01T15:53:45.798Z",
+            "updated_at": "2025-02-17T10:22:28.198Z"
+        },
+        {
+            "_id": "66abafbdf1ccf7ce0bd683b5",
+            "title": "Shopping App",
+            "description": "The Shopping App is a CRUD (Create, Read, Update, Delete) application developed using Flutter. Designed as a learning project to enhance Flutter skills, this app allows users to browse, add, update, and remove items from their shopping list. With a clean and intuitive user interface, the Shopping App provides a straightforward shopping experience, enabling users to manage their shopping needs efficiently.",
+            "role": "As the developer of the Shopping App, my role involved the complete design and implementation of the application using Flutter. I was responsible for coding the frontend interface, implementing CRUD functionalities, and ensuring smooth user interactions. Through this project, I aimed to deepen my understanding of Flutter development principles and enhance my proficiency in building mobile applications.",
+            "demo_link": "https://github.com/kyawswarlynn14/shop_app",
+            "code_link": "https://github.com/kyawswarlynn14/shop_app",
+            "tag": "Flutter",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fweb4.jpg1722527674308?alt=media&token=05412c08-4e24-45ca-bd6a-4b9a448e469f",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-01T15:54:37.688Z",
+            "updated_at": "2024-08-01T15:54:37.688Z"
+        },
+        {
+            "_id": "66abb008f1ccf7ce0bd683b6",
+            "title": "Palaung Min Thar Admin Dashboard",
+            "description": "The Palaung Min Thar Admin Dashboard is a comprehensive web application designed for managing an e-commerce platform. Built with Next.js, Prisma, and Tailwind CSS, this dashboard offers a user-friendly interface for administrators to oversee various aspects of the e-commerce store. From managing products and orders to analyzing sales data, the dashboard provides essential tools to streamline operations and enhance decision-making.",
+            "role": "As a full-stack developer, I led the development of the Palaung Min Thar Admin Dashboard, overseeing both frontend and backend implementation. My responsibilities included designing the frontend interface using Next.js and Tailwind CSS, developing backend functionalities with Prisma, and integrating APIs for data retrieval and manipulation. Additionally, I implemented user authentication and authorization mechanisms to ensure secure access to the dashboard's features.",
+            "demo_link": "https://palaungminthar.vercel.app",
+            "code_link": "https://github.com/kyawswarlynn14/ecommerce-admin",
+            "tag": "Next Js, Prisma, Tailwind CSS",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fweb6.png1722527744992?alt=media&token=3f48616a-ca64-42d0-a4f3-980427deb311",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-01T15:55:52.889Z",
+            "updated_at": "2024-08-01T15:55:52.889Z"
+        },
+        {
+            "_id": "66acf5bcf1ccf7ce0bd683b7",
+            "title": "Palaung Min Thar Store",
+            "description": "The Palaung Min Thar Store is an e-commerce frontend application built with Next.js and Tailwind CSS. Utilizing APIs from the e-commerce dashboard, this web app offers a seamless shopping experience for customers, allowing them to browse products, add items to cart, and complete purchases with ease. With a focus on performance and user experience, the Palaung Min Thar Store delivers a visually appealing and responsive interface for users to explore and shop.",
+            "role": "As the developer of the Palaung Min Thar Store, my role involved crafting the frontend interface using Next.js and Tailwind CSS. I integrated APIs from the e-commerce dashboard to fetch product data, manage cart functionalities, and handle user authentication. By leveraging Next.js's server-side rendering capabilities and Tailwind CSS's utility-first approach, I created a fast, efficient, and visually appealing e-commerce store that meets the needs of modern online shoppers.",
+            "demo_link": "https://palaungminthar.vercel.app",
+            "code_link": "https://github.com/kyawswarlynn14/ecommerce-store",
+            "tag": "Next Js, Prisma, Tailwind CSS",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fweb5.png1722611116463?alt=media&token=5fcf9d61-843f-45e0-b875-7a89b11f2055",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-02T15:05:32.727Z",
+            "updated_at": "2024-08-02T15:05:32.727Z"
+        },
+        {
+            "_id": "66acf6a5f1ccf7ce0bd683b8",
+            "title": "Blog Web Application",
+            "description": "The Blog Web Application is a versatile platform designed for users to create, share, and engage with blog posts. Developed using Next.js, GraphQL, and Tailwind CSS, this application offers a seamless and intuitive blogging experience. With features such as post creation, commenting, and user authentication, the Blog Web Application provides a comprehensive solution for individuals and organizations to establish an online presence and connect with their audience.",
+            "role": "As the sole full-stack developer, I spearheaded the development of the Blog Web Application from concept to deployment. My responsibilities encompassed frontend and backend development, database design, API integration, and deployment. Leveraging Next.js for server-side rendering, GraphQL for efficient data querying, and Tailwind CSS for responsive styling, I crafted a modern and feature-rich blogging platform that meets the needs of both content creators and readers.",
+            "demo_link": "https://kyawswarlynn-blog.vercel.app",
+            "code_link": "https://github.com/kyawswarlynn14/ksl-blog",
+            "tag": "NextJs, GraphQL, Tailwind CSS",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fweb7.png1722611330520?alt=media&token=6911ba3e-de13-49bb-8661-c41acac5eba9",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-02T15:09:25.533Z",
+            "updated_at": "2024-08-02T15:09:25.533Z"
+        },
+        {
+            "_id": "66acf6f5f1ccf7ce0bd683b9",
+            "title": "TastySoft",
+            "description": "TastySoft is a comprehensive web application developed for a software company, showcasing its services, portfolios, and team members. Built with Next.js, Node.js, PostgreSQL, Tailwind CSS, and Firebase, this application offers a visually appealing and user-friendly interface for visitors to explore the company's offerings and learn more about its team and projects. Additionally, TastySoft includes an admin dashboard for easy management of content and team member profiles.",
+            "role": "As a full-stack developer, I played a central role in the development of TastySoft, responsible for both frontend and backend implementation. My tasks included designing and building the frontend interface using Next.js and Tailwind CSS, developing backend functionalities with Node.js and PostgreSQL, and integrating Firebase for authentication and data storage. Additionally, I implemented the admin dashboard to facilitate easy content management and updates for the company's administrators.",
+            "demo_link": "https://tastysoft.co",
+            "code_link": "https://github.com/kyawswarlynn14",
+            "tag": "Next Js, Node Js, Postgresql, Tailwind CSS, Firebase",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fweb8.png1722611440143?alt=media&token=6c2dcc9a-fe6d-4e9c-a689-2462c54efbd3",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-02T15:10:45.88Z",
+            "updated_at": "2024-08-02T15:10:45.88Z"
+        },
+        {
+            "_id": "66acf7ebf1ccf7ce0bd683ba",
+            "title": "SchoolFlow",
+            "description": "SchoolFlow is a comprehensive web application designed for school management, providing tools for managing teachers, students, payments, expenses, and incomes. Built with React.js, Redux, Material-UI, Node.js, and MongoDB, this application offers a robust and intuitive interface for administrators to streamline various administrative tasks and generate insightful analyses using tables, charts, or graphs. From student enrollment to financial tracking, SchoolFlow facilitates efficient management of school operations.",
+            "role": "As the sole developer, I led the development of SchoolFlow, handling all aspects of the project from conception to implementation. My responsibilities included designing and implementing the frontend using React.js, Redux, and Material-UI, developing backend functionalities with Node.js and MongoDB, and integrating features for student and teacher management, payment tracking, and financial analysis. Through meticulous planning and execution, I created a powerful and user-friendly school management solution that meets the diverse needs of educational institutions.",
+            "demo_link": "https://tastysoft.co",
+            "code_link": "https://github.com/kyawswarlynn14",
+            "tag": "React Js, Redux, MUI, Node Js, MongoDb",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fschool_flow.png1722611685707?alt=media&token=d94a7161-6b4c-443e-9647-cd535a31e007",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-02T15:14:51Z",
+            "updated_at": "2024-08-02T15:14:51Z"
+        },
+        {
+            "_id": "66acf837f1ccf7ce0bd683bb",
+            "title": "Chat App without Socket",
+            "description": "The Chat App without Socket is a lightweight web application that enables users to engage in real-time chat conversations across different browser tabs. Developed using React.js and Redux, this chat app offers a seamless communication experience without relying on web sockets. Instead, it leverages local storage and the useEffect hook as a listener for data changes, allowing messages to be delivered and received instantly without the need for page refreshing. With its simple and efficient design, the Chat App without Socket provides a convenient solution for users to communicate within the same browser session.",
+            "role": "As the developer of the Chat App without Socket, I conceptualized and implemented the entire application, utilizing React.js and Redux to create the frontend interface and manage state. My role involved designing the chat functionality, implementing local storage for message storage, and utilizing the useEffect hook to listen for data changes and update the chat interface in real-time. By leveraging these techniques, I developed a lightweight and efficient chat app that meets the needs of users seeking real-time communication within the same browser environment.",
+            "demo_link": "https://mai-nano-chat.netlify.app",
+            "code_link": "https://github.com/kyawswarlynn14/react_test",
+            "tag": "React Js, Redux",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fchat_app.png1722611758916?alt=media&token=cfef3b9b-0cdf-42af-b037-c86c9a0e98ac",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-02T15:16:07.92Z",
+            "updated_at": "2024-08-02T15:16:07.92Z"
+        }
+    ],
+    "certificates": [
+        {
+            "_id": "66acf86ef1ccf7ce0bd683bc",
+            "title": "React - The Complete Guide 2024",
+            "content": "I've completed the Complete React Course on Udemy. Throughout the course, I delved into advanced concepts and best practices, honing my skills in component-based architecture, state management with Redux, and much more. I'm eager to apply my newfound knowledge to create even more innovative and user-friendly web applications.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fudemy_react_certificate.jpg1722611818440?alt=media&token=7370ea2e-5697-4b23-906a-690d2d5822ba",
+            "demo_link": "",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-02T15:17:02.306Z",
+            "updated_at": "2024-08-02T15:17:02.306Z"
+        },
+        {
+            "_id": "66acfa21f1ccf7ce0bd683bf",
+            "title": "JavaScript Algorithm and Data Structures",
+            "content": "I have earned the JavaScript Algorithm and Data Structures Certificate from freeCodeCamp. You can verify my certification below. This certification demonstrates my dedication to mastering Algorithm and Data Structures.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fjs-dna.png1722612179269?alt=media&token=90ee6207-01d6-42f6-afe8-ba64c4687679",
+            "demo_link": "https://www.freecodecamp.org/certification/kyawswarlynn14/javascript-algorithms-and-data-structures-v8",
+            "t1": null,
+            "t2": null,
+            "created_at": "2024-08-02T15:24:17.466Z",
+            "updated_at": "2024-08-02T15:24:17.466Z"
+        },
+        {
+            "_id": "67d8212471e2cdf8b9efbdc4",
+            "title": "Backend Master Class [Golang + Postgres + Kubernetes + gRPC]",
+            "content": "I've just completed the Backend Master Class: Golang + Postgres + Kubernetes + gRPC on Udemy! 🏆\nThis course deepened my understanding of building scalable, high-performance backend systems using:\n ✅ Golang for efficient and concurrent backend development\n ✅ PostgreSQL for robust and reliable data storage\n ✅ Kubernetes for container orchestration and seamless deployments\n ✅ gRPC for high-performance micro-services communication.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2Fgolang_udemy_certificate.jpg1742217494882?alt=media&token=0894fef0-89a7-45f6-a65d-b368464d2743",
+            "demo_link": "https://www.udemy.com/certificate/UC-04903461-0343-4829-a3f9-a071a83f7883/",
+            "t1": null,
+            "t2": null,
+            "created_at": "2025-03-17T13:18:28.084Z",
+            "updated_at": "2025-03-17T13:20:28.134Z"
+        },
+        {
+            "_id": "68653fe0cfd5c52ee088775a",
+            "title": "NCC Level 4 Diploma",
+            "content": "I successfully completed the NCC Education Level 4 Diploma in Computing, a UK-regulated qualification equivalent to the first year of a British undergraduate degree. The program provided comprehensive knowledge and practical skills in key computing areas such as software development, database systems, networking, and computer systems.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/se-reactjs.appspot.com/o/portfolio%2FScreenshot%202025-07-02%20at%208.38.12%E2%80%AFPM.png1751465320931?alt=media&token=1aa1fb28-eb92-4224-88d4-627a6a71283d",
+            "demo_link": "",
+            "t1": null,
+            "t2": null,
+            "created_at": "2025-07-02T14:19:12.455Z",
+            "updated_at": "2025-07-02T14:19:12.455Z"
+        }
+    ]
+}

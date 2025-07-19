@@ -11,17 +11,27 @@ import { useGetAllCertificatesQuery } from "@/store/certificate/certificateApi";
 import MainSkeleton from "@/components/loaders/MainSkeleton";
 import { useCreateVisitorLogMutation } from "@/store/visitorLog/visitorLogApi";
 import Cookies from "js-cookie";
+import localData from "@/public/data.json";
 
 export default function Home() {
+  const useLocalData = process.env.NEXT_PUBLIC_USE_LOCAL_DATA === "true";
   const first = Cookies.get('first_time') || 'true';
   const [show, setShow] = useState(false);
-  const { isLoading: aboutLoading, data: aboutMeData } = useGetLayoutQuery("about_me")
-  const { isLoading: serviceInfoLoading, data: serviceInfoData } = useGetLayoutQuery("service_info")
-  const { isLoading: projectInfoLoading, data: projectInfoData } = useGetLayoutQuery("project_info")
-  const { isLoading: blogInfoLoading, data: blogInfoData } = useGetLayoutQuery("blog_info")
-  const { isLoading: serviceLoading, data: serviceData } = useGetAllServicesQuery()
-  const { isLoading: projectLoading, data: projectData } = useGetAllProjectsQuery()
-  const { isLoading: certificateLoading, data: certificateData } = useGetAllCertificatesQuery()
+  const { isLoading: aboutLoading, data: aboutMeData } = useGetLayoutQuery("about_me", {
+    skip: useLocalData
+  })
+  const { isLoading: serviceInfoLoading, data: serviceInfoData } = useGetLayoutQuery("service_info", {
+    skip: useLocalData
+  })
+  const { isLoading: projectInfoLoading, data: projectInfoData } = useGetLayoutQuery("project_info", {
+    skip: useLocalData
+  })
+  const { isLoading: blogInfoLoading, data: blogInfoData } = useGetLayoutQuery("blog_info", {
+    skip: useLocalData
+  })
+  const { isLoading: serviceLoading, data: serviceData } = useGetAllServicesQuery({}, {skip: useLocalData})
+  const { isLoading: projectLoading, data: projectData } = useGetAllProjectsQuery({}, {skip: useLocalData})
+  const { isLoading: certificateLoading, data: certificateData } = useGetAllCertificatesQuery({}, {skip: useLocalData})
   const [ createVisitorLog ] = useCreateVisitorLogMutation();
 
   const isLoading = aboutLoading || serviceInfoLoading || projectInfoLoading || blogInfoLoading || serviceLoading || projectLoading || certificateLoading;
@@ -32,10 +42,10 @@ export default function Home() {
       await createVisitorLog();
       Cookies.set('first_time', "false");
     };
-    if(first === "true") {
+    if(first === "true" && !useLocalData) {
       runCreateVisitorLog();
     }
-  }, [first, createVisitorLog]);  
+  }, [first, createVisitorLog, useLocalData]);  
  
   useEffect(() => {
     const handleScroll = () => {
@@ -68,21 +78,21 @@ export default function Home() {
         <MainSkeleton />
       ) : (
         <>
-          <Main aboutMe={aboutMeData?.layout?.data} />
+          <Main aboutMe={aboutMeData?.layout?.data || localData.aboutMe} />
 
-          <Service serviceInfo={serviceInfoData?.layout?.data} services={serviceData?.services}/>
+          <Service serviceInfo={serviceInfoData?.layout?.data || localData.serviceInfo} services={serviceData?.services || localData.services}/>
 
           <Tools />
 
-          <Projects projectInfo={projectInfoData?.layout?.data} projects={projectData?.projects} />
+          <Projects projectInfo={projectInfoData?.layout?.data || localData.projectInfo} projects={projectData?.projects || localData.projects} />
 
           <div className="relative z-0">
-            <Certificates certificates={certificateData?.certificates} />
+            <Certificates certificates={certificateData?.certificates || localData.certificates} />
             <Contact />
             <div className="hidden md:block">
               <StarsCanvas />
             </div>
-            <Blog blogInfo={blogInfoData?.layout?.data} />
+            <Blog blogInfo={blogInfoData?.layout?.data || localData.blogInfo} />
           </div>
         </>
       )}

@@ -9,13 +9,27 @@ import ItemLayout from "@/components/layouts/ItemLayout";
 import Heading from "@/utils/Heading";
 import { useGetOneProjectQuery } from "@/store/project/projectApi";
 import Loader from "@/components/loaders/Loader";
+import localData from "@/public/data.json";
 
 const ProjectDetail = ({ params }) => {
 	const projectId = params?.id;
-	const {data, isLoading, isError} = useGetOneProjectQuery(projectId)
+	const useLocalData = process.env.NEXT_PUBLIC_USE_LOCAL_DATA === "true";
+
+	const {data, isLoading, isError} = useGetOneProjectQuery(projectId, { skip: useLocalData });
 	const [projectDetail, setProjectDetail] = useState(null);
 
 	const router = useRouter();
+
+	useEffect(() => {
+		if(useLocalData) {
+			const localProject = localData.projects.find(project => project._id === projectId);
+			if(localProject) {
+				setProjectDetail(localProject);
+			} else {
+				router.push("/404");
+			}
+		}
+	}, [useLocalData])
 
 	useEffect(() => {
 		if (!isLoading && data) {
